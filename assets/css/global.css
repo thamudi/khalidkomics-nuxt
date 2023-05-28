@@ -1,0 +1,9 @@
+body {
+  @apply antialiased;
+  @apply font-NotoSans;
+}
+
+body:lang(ar) {
+  @apply font-NotoSansArabic;
+  direction: rtl;
+}
