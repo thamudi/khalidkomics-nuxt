@@ -4,8 +4,8 @@
       <Title>{{ t('global.websiteTitle') }}</Title>
     </Head>
     <Body>
-      <!-- <UiAppHeader /> -->
-      <div class="content-wrapper md:px-0 bg-white">
+      <UiAppHeader />
+      <div class="container md:px-0 bg-white">
         <slot />
       </div>
       <!-- <UiAppFooter /> -->
