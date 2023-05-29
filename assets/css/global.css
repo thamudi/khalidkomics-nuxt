@@ -7,3 +7,50 @@ body:lang(ar) {
   @apply font-NotoSansArabic;
   direction: rtl;
 }
+
+/* Animations */
+
+.animate-wiggle:focus,
+.animate-wiggle:hover {
+  animation-duration: 666ms; /** 🤘🤘 **/
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-name: wiggle;
+  @apply cursor-pointer;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0.015turn);
+  }
+  10% {
+    transform: rotate(-0.015turn);
+  }
+  20% {
+    transform: rotate(0.015turn);
+  }
+  30% {
+    transform: rotate(-0.015turn);
+  }
+  40% {
+    transform: rotate(0.015turn);
+  }
+  50% {
+    transform: rotate(-0.015turn);
+  }
+  60% {
+    transform: rotate(0.015turn);
+  }
+  70% {
+    transform: rotate(-0.015turn);
+  }
+  80% {
+    transform: rotate(0.015turn);
+  }
+  90% {
+    transform: rotate(-0.015turn);
+  }
+  100% {
+    transform: rotate(0turn);
+  }
+}

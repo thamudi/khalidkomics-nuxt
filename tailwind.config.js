@@ -8,42 +8,23 @@ export default {
     // maxWidth: {
     //   240: '240px',
     // },
-    // container: {
-    //   center: true,
-    //   padding: '15px',
-    // },
+    container: {
+      // center: true,
+      padding: '15px',
+    },
     extend: {
       fontFamily: {
         NotoSansArabic: 'Noto Sans Arabic',
         NotoSans: 'Noto Sans',
       },
-      // colors: {
-      //   'josa-black': '#2e3436',
-      //   'josa-blue': {
-      //     light: '#c5e1ee',
-      //     DEFAULT: '#3897c0',
-      //     dark: '#1a485b',
-      //     veryDark: '#163e4e',
-      //   },
-      //   'josa-warm-grey': {
-      //     light: '#f7f6f5',
-      //     DEFAULT: '#efedec',
-      //     dark: '#aea79f',
-      //   },
-      //   'josa-red': {
-      //     veryLight: '#fee9e2',
-      //     light: '#f8c0ac',
-      //     DEFAULT: '#dd4814',
-      //     dark: '#b83b10',
-      //   },
-      //   'josa-green': {
-      //     veryLight: '#e9f3de',
-      //     light: '#cde2bb',
-      //     DEFAULT: '#8dbd63',
-      //     dark: '#5c813d',
-      //   },
-      //   grey90: '#e5e5e5',
-      // },
+      colors: {
+        'kk-blue': {
+          light: '#ddedf7',
+          DEFAULT: '#56a7d9',
+          dark: '#355686'
+        },
+        'kk-black': '#2e3436',
+      }
       // padding: {
       //   '15px': '15px',
       // },
