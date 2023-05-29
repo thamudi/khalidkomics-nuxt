@@ -1,5 +1,13 @@
 {
   "global": {
     "websiteTitle": "Khalid Komics"
+  },
+  "navigation": {
+    "home": "home",
+    "about": "about",
+    "archive": "archive",
+    "contact": "contact",
+    "store": "store",
+    "burger-menu": "burger-menu"
   }
 }

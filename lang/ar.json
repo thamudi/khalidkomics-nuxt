@@ -1,5 +1,13 @@
 {
   "global": {
     "websiteTitle": "خالد كومكس"
+  },
+  "navigation": {
+    "home": "الرئيسية",
+    "about": "من أنا",
+    "archive": "الأرشيف",
+    "contact": "للتواصل",
+    "store": "المتجر",
+    "burger-menu": "قائمة الملاحة"
   }
 }
