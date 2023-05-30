@@ -38,7 +38,7 @@
     @apply w-full;
     @apply border-b-kk-blue-dark border-solid border-b-[6px];
     @apply bg-kk-blue;
-    background-image: url('../../public/images/background/tile_transparent.svg');
+    background-image: url('../public/images/background/tile_transparent.svg');
     background-size: 10px;
   }
 </style>
