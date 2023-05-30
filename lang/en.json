@@ -1,13 +1,22 @@
 {
   "global": {
-    "websiteTitle": "Khalid Komics"
+    "websiteTitle": "Khalid Komics",
+    "shukri": "shukri",
+    "copyright": "Khalid Nahar. All rights reserved."
   },
   "navigation": {
+    "home": "home",
+    "about": "about khalid komics",
+    "archive": "archive comics",
+    "contact": "contact khalid komics",
+    "store": "khalid komics store",
+    "burger-menu": "burger-menu"
+  },
+  "footer": {
     "home": "home",
     "about": "about",
     "archive": "archive",
     "contact": "contact",
-    "store": "store",
-    "burger-menu": "burger-menu"
+    "store": "store"
   }
 }

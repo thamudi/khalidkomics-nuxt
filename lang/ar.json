@@ -1,13 +1,22 @@
 {
   "global": {
-    "websiteTitle": "خالد كومكس"
+    "websiteTitle": "خالد كومكس",
+    "shukri": "شكري",
+    "copyright": "كامل الحقوق محفوظة. خالد نهار"
   },
   "navigation": {
     "home": "الرئيسية",
-    "about": "من أنا",
-    "archive": "الأرشيف",
-    "contact": "للتواصل",
+    "about": "عن خالد كومكس",
+    "archive": "أرشيف الكومكس",
+    "contact": "للتواصل مع خالد",
     "store": "المتجر",
     "burger-menu": "قائمة الملاحة"
+  },
+  "footer": {
+    "home": "الرئيسية",
+    "about": "عن خالد كومكس",
+    "archive": "الأرشيف",
+    "contact": "للتواصل",
+    "store": "المتجر"
   }
 }
