@@ -8,7 +8,7 @@
       <div class="container md:px-0 bg-white">
         <slot />
       </div>
-      <!-- <UiAppFooter /> -->
+      <UiAppFooter />
     </Body>
   </Html>
 </template>

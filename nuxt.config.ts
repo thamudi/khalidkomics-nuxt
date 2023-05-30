@@ -54,7 +54,6 @@ export default defineNuxtConfig({
       endpoints: {
         cms: {
           url: '',
-          token: '',
         },
       },
     },
