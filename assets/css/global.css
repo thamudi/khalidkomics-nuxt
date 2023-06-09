@@ -8,6 +8,10 @@ body:lang(ar) {
   direction: rtl;
 }
 
+.direction-ltr {
+  direction: ltr;
+}
+
 /* Animations */
 
 .animate-wiggle:focus,
