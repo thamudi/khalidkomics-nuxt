@@ -34,11 +34,8 @@
 
 <style lang="postcss" scoped>
   .header {
-    @apply flex justify-around md:justify-center;
-    @apply w-full;
     @apply border-b-kk-blue-dark border-solid border-b-[6px];
-    @apply bg-kk-blue;
-    background-image: url('../public/images/background/tile_transparent.svg');
+    @apply bg-kk-blue bg-kk-tile-transparent;
     background-size: 10px;
   }
 </style>
