@@ -16,7 +16,17 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/tailwindcss',
     '@nuxt/image-edge',
+    'nuxt-swiper',
   ],
+
+  apiParty: {
+    endpoints: {
+      cms: {
+        url: process.env.NUXT_API_PARTY_ENDPOINTS_CMS_URL!,
+      },
+    },
+    allowClient: true,
+  },
 
   css: [
     '~/assets/css/fonts/typography.css',
@@ -49,15 +59,15 @@ export default defineNuxtConfig({
     debug: false,
   },
 
-  runtimeConfig: {
-    apiParty: {
-      endpoints: {
-        cms: {
-          url: '',
-        },
-      },
-    },
-  },
+  // runtimeConfig: {
+  //    apiParty: {
+  //      endpoints: {
+  //        cms: {
+  //          url: '',
+  //        },
+  //      },
+  //    },
+  // },
 
   typescript: {
     shim: false,
