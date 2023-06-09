@@ -4,12 +4,13 @@ export default {
     `./layouts/**/*.vue`,
     `./pages/**/*.vue`,
   ],
+  important: true,
   theme: {
     // maxWidth: {
     //   240: '240px',
     // },
     container: {
-      // center: true,
+      center: true,
       padding: '15px',
     },
     extend: {
@@ -24,6 +25,9 @@ export default {
           dark: '#355686'
         },
         'kk-black': '#2e3436',
+      },
+      backgroundImage: {
+        'kk-tile-transparent': "url('/images/background/tile_transparent.svg')",
       }
       // padding: {
       //   '15px': '15px',

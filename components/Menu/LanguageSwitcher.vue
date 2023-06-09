@@ -11,7 +11,6 @@
       :alt="localeItem.name"
       width="80"
       height="80"
-      @click="$emit('toggle-menu')"
     />
   </NuxtLink>
 </template>
