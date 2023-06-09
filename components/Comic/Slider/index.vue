@@ -37,8 +37,6 @@
 </template>
 
 <script setup>
-  import useDateFormatter from '~/composables/useDateFormatter'
-
   const props = defineProps({
     comics: {
       type: Object,
