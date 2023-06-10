@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <div v-if="!pending && !error">
-      <ComicSlider :comics="comicsData" />
+      <ComicSlider :comic="comicsData" />
       <ComicPagination
-        :comics-pagination="comicsPaginationData"
+        :comic-pagination="comicPaginationData"
         @change-comic="setPage"
       />
     </div>
@@ -17,10 +17,10 @@
   import qs from 'qs'
   import { get, set } from '@vueuse/core'
   const { locale } = useI18n()
-  const currentPage = useState('comicCurrentPage', () => 1)
+  const currentPage = useState('comicsCurrentPage', () => 1)
 
   const setPage = (newPage) => {
-    if (newPage <= get(comicsPaginationData).total) set(currentPage, newPage)
+    if (newPage <= get(comicPaginationData).total) set(currentPage, newPage)
   }
 
   const query = computed(() =>
@@ -57,7 +57,7 @@
 
   const comicsData = computed(() => get(comics).data[0].attributes)
 
-  const comicsPaginationData = computed(() => {
+  const comicPaginationData = computed(() => {
     return {
       page: get(comics).meta.pagination.page,
       pageCount: get(comics).meta.pagination.pageCount,

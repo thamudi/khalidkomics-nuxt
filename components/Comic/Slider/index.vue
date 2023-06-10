@@ -1,7 +1,7 @@
 <template>
   <div class="text-center flex justify-evenly mt-10">
-    <h1 class="bold">{{ props.comics.title }}</h1>
-    <span>{{ useDateFormatter(props.comics.releaseDate) }}</span>
+    <h1 class="bold">{{ props.comic.title }}</h1>
+    <span>{{ useDateFormatter(props.comic.releaseDate) }}</span>
   </div>
   <ClientOnly>
     <Swiper
@@ -38,16 +38,14 @@
 
 <script setup>
   const props = defineProps({
-    comics: {
+    comic: {
       type: Object,
       default: () => {},
     },
   })
 
   const comicSlides = computed(() => {
-    return props.comics.comic.data
-      ? props.comics.comic.data
-      : props.comics.comic
+    return props.comic.comic.data ? props.comic.comic.data : props.comic.comic
   })
 </script>
 
