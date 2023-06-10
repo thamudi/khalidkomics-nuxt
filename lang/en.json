@@ -2,7 +2,8 @@
   "global": {
     "websiteTitle": "Khalid Komics",
     "shukri": "shukri",
-    "copyright": "Khalid Nahar. All rights reserved."
+    "copyright": "Khalid Nahar. All rights reserved.",
+    "archive-title": "Welcome to the Archive!"
   },
   "navigation": {
     "home": "home",
