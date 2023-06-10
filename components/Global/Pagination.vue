@@ -7,9 +7,7 @@
           :class="currentPage == 1 ? 'disabled' : 'previous-page'"
           aria-label="Previous Page"
           @click="emitChangePage(currentPage - 1)"
-        >
-          <Icon :name="chevronIconPrevious" />
-        </button>
+        ></button>
       </li>
       <template v-for="i in pageCount" :key="i">
         <li v-if="i == pageCount || i == 1 || Math.abs(i - currentPage) < 3">
@@ -34,9 +32,7 @@
           :class="currentPage == pageCount ? 'disabled' : 'next-page'"
           aria-label="Next Page"
           @click="emitChangePage(currentPage + 1)"
-        >
-          <Icon :name="chevronIconNext" />
-        </button>
+        ></button>
       </li>
     </ul>
   </div>
@@ -64,15 +60,6 @@
       emit('changePage', newPage)
     }
   }
-
-  // return either the chevron-left icon or the chevron-right icon based on the locale
-  const chevronIconPrevious = computed(() =>
-    get(locale) === 'en' ? 'fa6-solid:chevron-left' : 'fa6-solid:chevron-right'
-  )
-  // return either the chevron-right icon or the chevron-left icon based on the locale
-  const chevronIconNext = computed(() =>
-    get(locale) === 'en' ? 'fa6-solid:chevron-right' : 'fa6-solid:chevron-left'
-  )
 </script>
 
 <style lang="postcss" scoped>
