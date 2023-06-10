@@ -12,9 +12,12 @@
     />
     <div v-if="!pending && !error">
       <div class="comics-list-container">
-        <div v-for="(comic, idx) in archiveList.data" :key="`${comic.id}-idx`">
+        <div
+          v-for="(comic, idx) in archiveList.data"
+          :key="`${comic.id}-${idx}`"
+        >
           <NuxtLink
-            :to="`${route.params.slug}/${comic.id}`"
+            :to="`/comic/${route.params.slug}/${comic.id}`"
             class="flex items-center m-4 p-4"
           >
             <nuxt-img
@@ -94,12 +97,17 @@
       watch: [query],
     }
   )
+
   const pagination = computed(() => {
     return {
       currentPage: get(archiveList).meta.pagination.page,
       pageCount: get(archiveList).meta.pagination.pageCount,
       total: get(archiveList).meta.pagination.total,
     }
+  })
+
+  watchEffect(async () => {
+    setPage(1)
   })
 </script>
 <style scoped lang="postcss">
