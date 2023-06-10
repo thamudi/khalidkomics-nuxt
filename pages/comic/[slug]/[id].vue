@@ -1,0 +1,51 @@
+<template>
+  <div class="container">
+    <div v-if="!pending && !error">
+      <ComicSlider :comic="comicData" />
+    </div>
+    <div v-else>
+      <ComicLoader />
+    </div>
+  </div>
+</template>
+<script setup>
+  import qs from 'qs'
+  import { get } from '@vueuse/core'
+  const route = useRoute()
+  const { locale } = useI18n()
+
+  const query = computed(() =>
+    qs.stringify(
+      {
+        populate: '*',
+        filters: {
+          archive: {
+            slug: {
+              $eq: route.params.slug,
+            },
+          },
+        },
+        locale: get(locale),
+      },
+      {
+        encodeValuesOnly: true,
+      }
+    )
+  )
+
+  const {
+    data: comic,
+    error,
+    pending,
+  } = await useCmsData(`comics/${route.params.id}?${get(query)}`, {
+    cache: true,
+    client: true,
+  })
+
+  const comicData = computed(() =>
+    get(comic).data.length
+      ? get(comic).data[0].attributes
+      : get(comic).data.attributes
+  )
+</script>
+<style scoped lang="postcss"></style>
