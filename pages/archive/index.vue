@@ -3,6 +3,10 @@
     <h1 class="text-center font-bold mt-4">
       {{ t('global.archive-title') }}
     </h1>
+    <ComicSearch />
+    <p class="text-center">
+      {{ t('global.browse') }}
+    </p>
     <div
       v-if="!pending && !error"
       class="grid grid-cols-2 gap-4 w-fit mx-auto my-4"

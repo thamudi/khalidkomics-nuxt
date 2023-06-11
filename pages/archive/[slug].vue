@@ -6,6 +6,10 @@
       </span>
       > {{ $route.params.slug }}
     </h1>
+    <ComicSearch
+      text="search.alternative-placeholder"
+      :value="route.params.slug"
+    />
     <GlobalSort
       :sort-order="currentSortOrder"
       @change-sort-order="setSortOrder"
