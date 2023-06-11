@@ -21,7 +21,7 @@
           :key="`${comic.id}-${idx}`"
         >
           <NuxtLink
-            :to="`/comic/${route.params.slug}/${comic.id}`"
+            :to="`/comic/${comic.attributes.archive.data.attributes.title}/${comic.id}`"
             class="flex items-center m-4 p-4"
           >
             <nuxt-img
@@ -57,8 +57,8 @@
 <script setup>
   import qs from 'qs'
   import { get, set } from '@vueuse/core'
-  const route = useRoute()
   const { locale, t } = useI18n()
+  const route = useRoute()
   const currentPage = useState('archiveCurrentPage', () => 1)
   const currentSortOrder = useState('archiveSortOrder', () => 'desc')
   const setPage = (newPage) => set(currentPage, newPage)
@@ -70,6 +70,9 @@
         populate: '*',
         sort: [`releaseDate:${get(currentSortOrder)}`],
         filters: {
+          keywords: {
+            $contains: route.query.q,
+          },
           archive: {
             slug: {
               $eq: route.params.slug,

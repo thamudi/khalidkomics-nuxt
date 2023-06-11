@@ -4,12 +4,14 @@
       <span class="capitalize">
         {{ t('footer.archive') }}
       </span>
-      > {{ $route.params.slug }}
     </h1>
     <ComicSearch
       text="search.alternative-placeholder"
       :value="route.params.slug"
     />
+    <p class="text-center">
+      {{ t('search.result-title') }} {{ route.query.q }}
+    </p>
     <GlobalSort
       :sort-order="currentSortOrder"
       @change-sort-order="setSortOrder"
@@ -21,7 +23,7 @@
           :key="`${comic.id}-${idx}`"
         >
           <NuxtLink
-            :to="`/comic/${route.params.slug}/${comic.id}`"
+            :to="`/comic/${comic.attributes.archive.data.attributes.title}/${comic.id}`"
             class="flex items-center m-4 p-4"
           >
             <nuxt-img
@@ -57,8 +59,8 @@
 <script setup>
   import qs from 'qs'
   import { get, set } from '@vueuse/core'
-  const route = useRoute()
   const { locale, t } = useI18n()
+  const route = useRoute()
   const currentPage = useState('archiveCurrentPage', () => 1)
   const currentSortOrder = useState('archiveSortOrder', () => 'desc')
   const setPage = (newPage) => set(currentPage, newPage)
@@ -70,10 +72,8 @@
         populate: '*',
         sort: [`releaseDate:${get(currentSortOrder)}`],
         filters: {
-          archive: {
-            slug: {
-              $eq: route.params.slug,
-            },
+          keywords: {
+            $contains: route.query.q,
           },
         },
         pagination: {

@@ -3,7 +3,8 @@
     "websiteTitle": "خالد كومكس",
     "shukri": "شكري",
     "copyright": "كامل الحقوق محفوظة. خالد نهار",
-    "archive-title": "مرحبا فيك بالأرشيف!"
+    "archive-title": "مرحبا فيك بالأرشيف!",
+    "browse": "... أو تصفح الكومكس حسب السنوات"
   },
   "navigation": {
     "home": "الرئيسية",
@@ -12,6 +13,11 @@
     "contact": "للتواصل مع خالد",
     "store": "المتجر",
     "burger-menu": "قائمة الملاحة"
+  },
+  "search": {
+    "placeholder": "إبحث عن كومك محدد... ",
+    "alternative-placeholder": "إبحث عن كومك في ",
+    "result-title": "نتائح البحث ل"
   },
   "footer": {
     "home": "الرئيسية",

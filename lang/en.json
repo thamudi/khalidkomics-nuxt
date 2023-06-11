@@ -3,7 +3,8 @@
     "websiteTitle": "Khalid Komics",
     "shukri": "shukri",
     "copyright": "Khalid Nahar. All rights reserved.",
-    "archive-title": "Welcome to the Archive!"
+    "archive-title": "Welcome to the Archive!",
+    "browse": "...or browse comics by year!"
   },
   "navigation": {
     "home": "home",
@@ -12,6 +13,11 @@
     "contact": "contact khalid komics",
     "store": "khalid komics store",
     "burger-menu": "burger-menu"
+  },
+  "search": {
+    "placeholder": "Search for specific comics ...",
+    "alternative-placeholder": "Search for comics in",
+    "result-title": "Search Results for"
   },
   "footer": {
     "home": "home",

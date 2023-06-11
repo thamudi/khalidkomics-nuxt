@@ -1,5 +1,6 @@
 <template>
-  <div class="text-center flex justify-evenly mt-10">
+  <ComicSearch />
+  <div class="text-center flex justify-evenly">
     <h1 class="bold">{{ props.comic.title }}</h1>
     <span>{{ useDateFormatter(props.comic.releaseDate) }}</span>
   </div>

@@ -28,6 +28,7 @@ export default {
       },
       backgroundImage: {
         'kk-tile-transparent': "url('/images/background/tile_transparent.svg')",
+        'search-icon':"url('/images/icons/icons_search.svg')"
       }
       // padding: {
       //   '15px': '15px',
