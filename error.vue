@@ -5,7 +5,7 @@
     </Head>
     <Body>
       <UiAppHeader />
-      <div class="mt-24 container px-12 md:w-1/2 md:mx-auto h-[68vh]">
+      <div class="mt-24 container px-12 lg:w-1/2 lg:mx-auto h-[68vh]">
         <div class="__nuxt-error-page">
           <div class="flex flex-col gap-y-4 lg:gap-y-8">
             <h1 class="font-bold">{{ t('global.404.title') }}</h1>

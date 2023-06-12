@@ -1,5 +1,5 @@
 <template>
-  <div id="search" class="container">
+  <div id="search">
     <form class="mx-4" @submit.prevent="search">
       <input
         name="text"

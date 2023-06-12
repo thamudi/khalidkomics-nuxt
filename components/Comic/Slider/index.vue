@@ -52,11 +52,11 @@
 
 <style scoped lang="postcss">
   .swiper-creative {
-    @apply md:w-[500px];
-    @apply md:h-[500px];
+    @apply lg:w-[500px];
+    @apply lg:h-[500px];
   }
   .swiper-slide {
-    @apply md:w-[500px];
-    @apply md:h-[550px];
+    @apply lg:w-[500px];
+    @apply lg:h-[550px];
   }
 </style>

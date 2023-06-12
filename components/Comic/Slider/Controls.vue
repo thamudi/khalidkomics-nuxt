@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="hidden md:block">
+  <div class="hidden lg:block">
     <div
       class="swiper-button-prev swiper-button-styles"
       @click="swiper.slidePrev()"

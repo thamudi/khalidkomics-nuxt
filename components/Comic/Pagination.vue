@@ -1,5 +1,5 @@
 <template>
-  <div class="container my-4 md:w-[50vw] lg:w-[35vw]">
+  <div class="container my-4 lg:w-[50vw] lg:w-[35vw]">
     <div class="flex justify-evenly direction-ltr">
       <nuxt-img
         v-if="!props.comicPagination.page < props.comicPagination.pageCount"
@@ -7,7 +7,7 @@
         alt="previous"
         width="125"
         height="500"
-        class="md:w-[160px] cursor-pointer"
+        class="lg:w-[160px] cursor-pointer"
         @click="$emit('changeComic', props.comicPagination.page + 1)"
       />
 
@@ -17,7 +17,7 @@
         alt="next"
         width="125"
         height="500"
-        class="md:w-[160px] cursor-pointer"
+        class="lg:w-[160px] cursor-pointer"
         @click="$emit('changeComic', props.comicPagination.page - 1)"
       />
     </div>

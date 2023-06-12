@@ -5,7 +5,7 @@
     </Head>
     <Body>
       <UiAppHeader />
-      <div class="container md:px-0 bg-white">
+      <div class="container lg:px-0 bg-white">
         <slot />
       </div>
       <UiAppFooter />
