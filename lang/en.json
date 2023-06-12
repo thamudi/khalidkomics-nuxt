@@ -38,7 +38,7 @@
         "message": "Message is required!"
       },
       "invalid": {
-        "email": "Email not correct!",
+        "email": "Email not correct!"
       }
     },
     "error": {
