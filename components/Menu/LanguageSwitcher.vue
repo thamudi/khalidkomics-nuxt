@@ -7,7 +7,7 @@
   >
     <nuxt-img
       class="animate-wiggle"
-      :src="`/images/icons/icons_lang_${localeItem.code}.svg`"
+      :src="`/images/icons/lang_${localeItem.code}.svg`"
       :alt="localeItem.name"
       width="80"
       height="80"

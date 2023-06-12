@@ -3,7 +3,7 @@
     <div class="flex justify-evenly direction-ltr">
       <nuxt-img
         v-if="!props.comicPagination.page < props.comicPagination.pageCount"
-        :src="`/images/pagination/icons_arrow_previous_${locale}.svg`"
+        :src="`/images/pagination/arrow_previous_${locale}.svg`"
         alt="previous"
         width="125"
         height="500"
@@ -13,7 +13,7 @@
 
       <nuxt-img
         v-if="props.comicPagination.page !== 1"
-        :src="`/images/pagination/icons_arrow_next_${locale}.svg`"
+        :src="`/images/pagination/arrow_next_${locale}.svg`"
         alt="next"
         width="125"
         height="500"
