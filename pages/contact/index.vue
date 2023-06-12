@@ -61,7 +61,7 @@
           alt="khalid-komics"
           width="150"
           height="150"
-          src="/images/contact/contact_illustration.svg"
+          src="/images/contact/illustration.svg"
           class="absolute -bottom-16"
         />
       </div>
