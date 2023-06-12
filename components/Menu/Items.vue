@@ -20,19 +20,19 @@
 
   const navItems = ref([
     {
-      link: '/',
+      link: `/${locale.value}`,
       label: 'home',
     },
     {
-      link: '/archive',
+      link: `/${locale.value}/archive`,
       label: 'archive',
     },
     {
-      link: '/about',
+      link: `/${locale.value}/about`,
       label: 'about',
     },
     {
-      link: '/contact',
+      link: `/${locale.value}/contact`,
       label: 'contact',
     },
     {
