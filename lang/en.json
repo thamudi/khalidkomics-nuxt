@@ -19,6 +19,32 @@
     "alternative-placeholder": "Search for comics in",
     "result-title": "Search Results for"
   },
+  "contact": {
+    "title": "Send me a message and I'll get back to you!"
+  },
+  "form": {
+    "fname": "First Name",
+    "lname": "Last Name",
+    "email": "Email Address",
+    "message": "Message",
+    "submit": "Submit",
+    "success": {
+      "message": "Mail was sent"
+    },
+    "info": {
+      "empty": {
+        "name": "First and last name are required!",
+        "email": "Email is required!",
+        "message": "Message is required!"
+      },
+      "invalid": {
+        "email": "Email not correct!"
+      }
+    },
+    "error": {
+      "general": "Woops! Something went wrong!"
+    }
+  },
   "footer": {
     "home": "home",
     "about": "about",

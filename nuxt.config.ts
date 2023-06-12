@@ -59,15 +59,13 @@ export default defineNuxtConfig({
     debug: false,
   },
 
-  // runtimeConfig: {
-  //    apiParty: {
-  //      endpoints: {
-  //        cms: {
-  //          url: '',
-  //        },
-  //      },
-  //    },
-  // },
+  runtimeConfig: {
+    smtpPort: '',
+    smtpEmail: '',
+    smtpPass: '',
+    smtpHost: '',
+    mailTo: '',
+  },
 
   typescript: {
     shim: false,

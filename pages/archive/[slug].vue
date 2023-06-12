@@ -59,6 +59,7 @@
   import { get, set } from '@vueuse/core'
   const route = useRoute()
   const { locale, t } = useI18n()
+  const currentSlug = useState('archiveSlug', () => route.params.slug)
   const currentPage = useState('archiveCurrentPage', () => 1)
   const currentSortOrder = useState('archiveSortOrder', () => 'desc')
   const setPage = (newPage) => set(currentPage, newPage)
@@ -111,7 +112,7 @@
   })
 
   watchEffect(async () => {
-    setPage(1)
+    if (get(currentSlug) !== route.params.slug) setPage(1)
   })
 </script>
 <style scoped lang="postcss">
