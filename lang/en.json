@@ -4,14 +4,19 @@
     "shukri": "shukri",
     "copyright": "Khalid Nahar. All rights reserved.",
     "archive-title": "Welcome to the Archive!",
-    "browse": "...or browse comics by year!"
+    "browse": "...or browse comics by year!",
+    "404": {
+      "title": "This cup's empty :(",
+      "paragraph_1": "It looks like the page you're looking for has been moved or no longer exists.",
+      "paragraph_2": "Perhaps you can find what you're looking for in one of the below links:"
+    }
   },
   "navigation": {
     "home": "home",
-    "about": "about khalid komics",
-    "archive": "archive comics",
-    "contact": "contact khalid komics",
-    "store": "khalid komics store",
+    "about": "about",
+    "archive": "archive",
+    "contact": "contact ",
+    "store": "store",
     "burger-menu": "burger-menu"
   },
   "search": {
