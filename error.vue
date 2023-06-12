@@ -50,19 +50,19 @@
 
   const navItems = ref([
     {
-      link: `/${locale.value}`,
+      link: `/`,
       label: 'home',
     },
     {
-      link: `/${locale.value}/archive`,
+      link: `/archive`,
       label: 'archive',
     },
     {
-      link: `/${locale.value}/about`,
+      link: `/about`,
       label: 'about',
     },
     {
-      link: `/${locale.value}/contact`,
+      link: `/contact`,
       label: 'contact',
     },
     {
