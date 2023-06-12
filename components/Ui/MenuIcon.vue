@@ -1,5 +1,5 @@
 <template>
-  <div class="block md:hidden">
+  <div class="block lg:hidden">
     <nuxt-img
       class="animate-wiggle"
       src="/images/icons/hamburger.svg"

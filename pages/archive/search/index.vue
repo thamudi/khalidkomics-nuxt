@@ -117,11 +117,11 @@
 <style scoped lang="postcss">
   .comics-list-container {
     @apply flex flex-col w-full;
-    @apply md:w-fit md:grid md:grid-cols-3 md:gap-4 md:mx-4;
+    @apply lg:w-fit lg:grid lg:grid-cols-3 lg:gap-4 lg:mx-4;
   }
 
   .thumbnail {
     @apply object-cover mr-5;
-    @apply md:w-40;
+    @apply lg:w-40;
   }
 </style>

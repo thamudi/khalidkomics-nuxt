@@ -4,7 +4,7 @@
       <span class="flex">
         <nuxt-img
           class="animate-wiggle my-3 md:my-auto md:mx-1 md:w-[100px]"
-          :src="`/images/navigation/icons_${linkItem.label}_${locale}.svg`"
+          :src="`/images/navigation/${linkItem.label}_${locale}.svg`"
           :alt="t(`navigation.${linkItem.label}`)"
           width="90"
           height="90"
@@ -20,19 +20,19 @@
 
   const navItems = ref([
     {
-      link: `/${locale.value}`,
+      link: '/',
       label: 'home',
     },
     {
-      link: `/${locale.value}/archive`,
+      link: '/archive',
       label: 'archive',
     },
     {
-      link: `/${locale.value}/about`,
+      link: '/about',
       label: 'about',
     },
     {
-      link: `/${locale.value}/contact`,
+      link: '/contact',
       label: 'contact',
     },
     {

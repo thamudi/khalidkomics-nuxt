@@ -9,7 +9,7 @@
         </div>
         <div class="flex flex-row gap-x-4 align-top">
           <nuxt-img
-            :src="`/images/contact/contact_${type}.svg`"
+            :src="`/images/contact/${type}.svg`"
             :alt="`${type}`"
             width="120"
             height="120"

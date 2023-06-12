@@ -18,7 +18,7 @@
       >
         <NuxtLink :to="item.link">
           <nuxt-img
-            :src="`/images/icons/icons_${item.socialNetwork.toLowerCase()}_white.svg`"
+            :src="`/images/icons/${item.socialNetwork.toLowerCase()}_white.svg`"
             :alt="item.socialNetwork.toLowerCase()"
             width="30"
             height="30"

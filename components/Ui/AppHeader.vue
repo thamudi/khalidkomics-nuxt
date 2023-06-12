@@ -1,10 +1,10 @@
 <template>
   <header class="header">
     <div class="container">
-      <div class="flex justify-between items-center md:justify-center">
+      <div class="flex justify-between items-center lg:justify-center">
         <NuxtLink :to="localePath('/')">
           <nuxt-img
-            class="my-4 md:w-[350px]"
+            class="my-4 lg:w-[350px]"
             src="/logos/site_icons_logo_full_white.svg"
             :alt="t('global.websiteTitle')"
             width="200"
@@ -14,7 +14,7 @@
 
         <UiMenuIcon :is-open="isOpen" @toggle-menu="toggleMenu" />
       </div>
-      <MenuNavBar :class="isOpen ? 'flex' : 'hidden'" class="w-full md:flex" />
+      <MenuNavBar :class="isOpen ? 'flex' : 'hidden'" class="w-full lg:flex" />
     </div>
   </header>
 </template>
