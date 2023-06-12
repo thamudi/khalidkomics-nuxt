@@ -1,3 +1,5 @@
+import { createTransport } from 'nodemailer'
+
 interface BodyData {
   first_name: string
   last_name: string
@@ -23,7 +25,19 @@ function validateBodyData(body: BodyData): Boolean {
   return true
 }
 
+function createNodeMailerTransport(config: any) {
+  return createTransport({
+    port: config.smtpPort || 465,
+    host: config.smtpHost || 'smtp.gmail.com',
+    auth: {
+      user: config.smtpEmail || '',
+      pass: config.smtpPass || '',
+    },
+    secure: true,
+  })
+}
 export default defineEventHandler(async (event) => {
+  const config = useRuntimeConfig()
   const body: BodyData = await readBody(event)
 
   try {
@@ -36,5 +50,22 @@ export default defineEventHandler(async (event) => {
     }
   }
 
-  return { type: 'success', message: 'form.success.message' }
+  try {
+    const mailOptions = {
+      from: body.email,
+      to: config.mailTo,
+      subject: `Message from Khalid Komics dot com`,
+      text: `\n${body.message}.\n\n Email From: ${body.email} `,
+    }
+    const transporter = createNodeMailerTransport(config)
+    await transporter.sendMail(mailOptions)
+    return { type: 'success', message: 'form.success.message' }
+  } catch (error: any) {
+    console.log(error.message)
+    setResponseStatus(event, 500)
+    return {
+      type: 'error',
+      message: 'form.error.general',
+    }
+  }
 })
