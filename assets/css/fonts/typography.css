@@ -1,0 +1,249 @@
+/* Latin */
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Noto Sans'),
+    url(../../fonts/regular/NotoSans-Thin.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Noto Sans'),
+    url(../../fonts/regular/NotoSans-ThinItalic.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: local('Noto Sans'),
+    url(../../fonts/regular/NotoSans-ExtraLight.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: local('Noto Sans'),
+    url(../../fonts/regular/NotoSans-ExtraLightItalic.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Noto Sans'),
+    url(../../fonts/regular/NotoSans-Light.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Noto Sans'),
+    url(../../fonts/regular/NotoSans-LightItalic.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Noto Sans'),
+    url(../../fonts/regular/NotoSans-Regular.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Noto Sans'),
+    url(../../fonts/regular/NotoSans-Italic.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Noto Sans'),
+    url(../../fonts/regular/NotoSans-Medium.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Noto Sans'),
+    url(../../fonts/regular/NotoSans-MediumItalic.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Noto Sans'),
+    url(../../fonts/regular/NotoSans-SemiBold.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Noto Sans'),
+    url(../../fonts/regular/NotoSans-SemiBoldItalic.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Noto Sans'),
+    url(../../fonts/regular/NotoSans-Bold.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Noto Sans'),
+    url(../../fonts/regular/NotoSans-BoldItalic.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local('Noto Sans'),
+    url(../../fonts/regular/NotoSans-ExtraBold.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: local('Noto Sans'),
+    url(../../fonts/regular/NotoSans-ExtraBoldItalic.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local('Noto Sans'),
+    url(../../fonts/regular/NotoSans-Black.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: local('Noto Sans'),
+    url(../../fonts/regular/NotoSans-BlackItalic.ttf) format('trueType');
+}
+
+/* Arabic */
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Noto Sans Arabic'),
+    url(../../fonts/arabic/NotoSansArabic-Thin.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: local('Noto Sans Arabic'),
+    url(../../fonts/arabic/NotoSansArabic-ExtraLight.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Noto Sans Arabic'),
+    url(../../fonts/arabic/NotoSansArabic-Light.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Noto Sans Arabic'),
+    url(../../fonts/arabic/NotoSansArabic-Regular.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Noto Sans Arabic'),
+    url(../../fonts/arabic/NotoSansArabic-Medium.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Noto Sans Arabic'),
+    url(../../fonts/arabic/NotoSansArabic-SemiBold.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Noto Sans Arabic'),
+    url(../../fonts/arabic/NotoSansArabic-Bold.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local('Noto Sans Arabic'),
+    url(../../fonts/arabic/NotoSansArabic-ExtraBold.ttf) format('trueType');
+}
+
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local('Noto Sans Arabic'),
+    url(../../fonts/arabic/NotoSansArabic-Black.ttf) format('trueType');
+}
+
+* {
+  font-family: 'Noto Sans', sans-serif;
+  /* font-family: 'Noto Sans Arabic', sans-serif; */
+}

@@ -1,0 +1,60 @@
+{
+  "global": {
+    "websiteTitle": "Khalid Komics",
+    "shukri": "shukri",
+    "copyright": "Khalid Nahar. All rights reserved.",
+    "archive-title": "Welcome to the Archive!",
+    "browse": "...or browse comics by year!",
+    "404": {
+      "title": "This cup's empty :(",
+      "paragraph_1": "It looks like the page you're looking for has been moved or no longer exists.",
+      "paragraph_2": "Perhaps you can find what you're looking for in one of the below links:"
+    }
+  },
+  "navigation": {
+    "home": "home",
+    "about": "about",
+    "archive": "archive",
+    "contact": "contact ",
+    "store": "store",
+    "burger-menu": "burger-menu"
+  },
+  "search": {
+    "placeholder": "Search for specific comics ...",
+    "alternative-placeholder": "Search for comics in",
+    "result-title": "Search Results for"
+  },
+  "contact": {
+    "title": "Send me a message and I'll get back to you!"
+  },
+  "form": {
+    "fname": "First Name",
+    "lname": "Last Name",
+    "email": "Email Address",
+    "message": "Message",
+    "submit": "Submit",
+    "success": {
+      "message": "Mail was sent"
+    },
+    "info": {
+      "empty": {
+        "name": "First and last name are required!",
+        "email": "Email is required!",
+        "message": "Message is required!"
+      },
+      "invalid": {
+        "email": "Email not correct!"
+      }
+    },
+    "error": {
+      "general": "Woops! Something went wrong!"
+    }
+  },
+  "footer": {
+    "home": "home",
+    "about": "about",
+    "archive": "archive",
+    "contact": "contact",
+    "store": "store"
+  }
+}
