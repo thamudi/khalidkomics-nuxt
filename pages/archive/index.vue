@@ -1,36 +1,34 @@
 <template>
-  <div class="container">
-    <h1 class="text-center font-bold mt-4">
-      {{ t('global.archive-title') }}
-    </h1>
-    <ComicSearch />
-    <p class="text-center">
-      {{ t('global.browse') }}
-    </p>
-    <div
-      v-if="!pending && !error"
-      class="grid grid-cols-2 gap-4 w-fit mx-auto my-4"
-    >
-      <div v-for="(archive, idx) in archivesData" :key="`${archive}-${idx}`">
-        <NuxtLink :to="`/archive/${archive.attributes.slug}`">
-          <div class="overlay">
-            <span class="overlay-title">
-              {{ archive.attributes.slug }}
-            </span>
-          </div>
-          <nuxt-img
-            class="overlay-rounded-corners"
-            :src="archive.attributes.thumbnail.data.attributes.url"
-            :alt="archive.attributes.slug"
-            width="135"
-            heigh="135"
-          />
-        </NuxtLink>
-      </div>
+  <h1 class="text-center font-bold mt-4">
+    {{ t('global.archive-title') }}
+  </h1>
+  <ComicSearch />
+  <p class="text-center">
+    {{ t('global.browse') }}
+  </p>
+  <div
+    v-if="!pending && !error"
+    class="grid grid-cols-2 gap-4 w-fit mx-auto my-4"
+  >
+    <div v-for="(archive, idx) in archivesData" :key="`${archive}-${idx}`">
+      <NuxtLink :to="`/archive/${archive.attributes.slug}`">
+        <div class="overlay">
+          <span class="overlay-title">
+            {{ archive.attributes.slug }}
+          </span>
+        </div>
+        <nuxt-img
+          class="overlay-rounded-corners"
+          :src="archive.attributes.thumbnail.data.attributes.url"
+          :alt="archive.attributes.slug"
+          width="135"
+          heigh="135"
+        />
+      </NuxtLink>
     </div>
-    <div v-else>
-      <ComicLoader />
-    </div>
+  </div>
+  <div v-else>
+    <ComicLoader />
   </div>
 </template>
 <script setup>

@@ -5,6 +5,11 @@
     "copyright": "Khalid Nahar. All rights reserved.",
     "archive-title": "Welcome to the Archive!",
     "browse": "...or browse comics by year!",
+    "clipboard": {
+      "ok": "Ok",
+      "success": "Copied the link to clipboard!",
+      "error": "Something went wrong!"
+    },
     "404": {
       "title": "This cup's empty :(",
       "paragraph_1": "It looks like the page you're looking for has been moved or no longer exists.",
