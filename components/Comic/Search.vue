@@ -35,7 +35,7 @@
 <style scoped lang="postcss">
   #search {
     @apply flex flex-wrap;
-    @apply m-4;
+    @apply my-4;
     @apply bg-transparent;
     @apply text-xl;
   }
