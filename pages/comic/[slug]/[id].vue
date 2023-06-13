@@ -1,11 +1,10 @@
 <template>
-  <div class="container">
-    <div v-if="!pending && !error">
-      <ComicSlider :comic="comicData" />
-    </div>
-    <div v-else>
-      <ComicLoader />
-    </div>
+  <div v-if="!pending && !error">
+    <ComicSlider :comic="comicData" />
+    <ComicShare :comic-url="`/${comicUrl}`" />
+  </div>
+  <div v-else>
+    <ComicLoader />
   </div>
 </template>
 <script setup>
@@ -46,6 +45,9 @@
     get(comic).data.length
       ? get(comic).data[0].attributes
       : get(comic).data.attributes
+  )
+  const comicUrl = computed(
+    () => `${get(comicData).archive.slug}/${get(comicData).id}`
   )
 </script>
 <style scoped lang="postcss"></style>

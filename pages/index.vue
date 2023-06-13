@@ -1,15 +1,14 @@
 <template>
-  <div class="container">
-    <div v-if="!pending && !error">
-      <ComicSlider :comic="comicsData" />
-      <ComicPagination
-        :comic-pagination="comicPaginationData"
-        @change-comic="setPage"
-      />
-    </div>
-    <div v-else>
-      <ComicLoader />
-    </div>
+  <div v-if="!pending && !error">
+    <ComicSlider :comic="comicsData" />
+    <ComicPagination
+      :comic-pagination="comicPaginationData"
+      @change-comic="setPage"
+    />
+    <ComicShare :comic-url="comicUrl" />
+  </div>
+  <div v-else>
+    <ComicLoader />
   </div>
 </template>
 
@@ -56,6 +55,12 @@
   )
 
   const comicsData = computed(() => get(comics).data[0].attributes)
+  const comicUrl = computed(
+    () =>
+      `${get(comicsData).archive.data.attributes.slug}/${
+        get(comics).data[0].id
+      }`
+  )
 
   const comicPaginationData = computed(() => {
     return {
