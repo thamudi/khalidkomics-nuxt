@@ -84,6 +84,7 @@
   const response = useState('contactResponse', () => {})
 
   const closeDialog = () => set(submitted, false)
+
   const submitForm = async () => {
     set(disabled, true)
     const { first_name, last_name, email, message } = toRefs(form)
