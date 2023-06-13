@@ -1,26 +1,24 @@
 <template>
-  <div class="container">
-    <div v-if="!pending && !error">
-      <div class="subPage">
-        <h1 class="text-center font-bold mt-4">
-          {{ aboutData.AboutTitle }}
-        </h1>
-        <div class="wrapper">
-          <nuxt-img
-            width="500"
-            height="600"
-            :alt="aboutData.AboutTitle"
-            :src="imageBanner"
-          />
-          <div id="authorBlurb">
-            <p class="mt-4">{{ aboutData.Content }}</p>
-          </div>
+  <div v-if="!pending && !error">
+    <div class="subPage">
+      <h1 class="text-center font-bold mt-4">
+        {{ aboutData.AboutTitle }}
+      </h1>
+      <div class="wrapper">
+        <nuxt-img
+          width="500"
+          height="600"
+          :alt="aboutData.AboutTitle"
+          :src="imageBanner"
+        />
+        <div id="authorBlurb">
+          <p class="mt-4">{{ aboutData.Content }}</p>
         </div>
       </div>
     </div>
-    <div v-else>
-      <ComicLoader />
-    </div>
+  </div>
+  <div v-else>
+    <ComicLoader />
   </div>
 </template>
 <script setup>

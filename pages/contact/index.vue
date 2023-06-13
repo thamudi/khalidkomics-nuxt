@@ -1,9 +1,10 @@
 <template>
-  <div class="container mx-8 lg:mx-auto lg:w-1/2 relative">
+  <div class="mx-8 lg:mx-auto lg:w-1/2 relative">
     <FormMessage
       v-if="submitted"
       :type="response.type"
       :message="response.message"
+      @close-dialog="closeDialog"
     />
     <form
       class="border-4 border-black p-8 my-16"
@@ -82,6 +83,7 @@
   })
   const response = useState('contactResponse', () => {})
 
+  const closeDialog = () => set(submitted, false)
   const submitForm = async () => {
     set(disabled, true)
     const { first_name, last_name, email, message } = toRefs(form)
