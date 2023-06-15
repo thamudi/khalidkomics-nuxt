@@ -1,7 +1,7 @@
 <template>
   <div v-if="!pending && !error">
     <ComicSlider :comic="comicData" />
-    <ComicShare :comic-url="`/${comicUrl}`" />
+    <ComicShare :comic-url="`${comicUrl}`" />
   </div>
   <div v-else>
     <ComicLoader />
