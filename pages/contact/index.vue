@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-8 lg:mx-auto lg:w-1/2 relative">
+  <div class="lg:w-1/2 relative">
     <FormMessage
       v-if="submitted"
       :type="response.type"
