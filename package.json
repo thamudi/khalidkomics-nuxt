@@ -29,6 +29,7 @@
     "copy-to-clipboard": "^3.3.3",
     "nodemailer": "^6.9.3",
     "nuxt-swiper": "^1.1.0",
+    "swiper": "9.4.1",
     "qs": "^6.11.2",
     "typed.js": "^2.0.16"
   },
