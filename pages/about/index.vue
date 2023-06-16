@@ -44,6 +44,19 @@
   const imageBanner = computed(
     () => get(aboutData).ImageBanner.data.attributes.url
   )
+
+  const { seoTitle, seoImage, seoDescription } = useSeo(get(data))
+
+  useSeoMeta({
+    title: () => get(seoTitle),
+    ogTitle: () => get(seoTitle),
+    twitterTitle: () => get(seoTitle),
+    description: () => get(seoDescription),
+    ogDescription: () => get(seoDescription),
+    twitterDescription: () => get(seoDescription),
+    ogImage: () => get(seoImage),
+    twitterImage: () => get(seoImage),
+  })
 </script>
 <style scoped lang="postcss">
   .subPage {

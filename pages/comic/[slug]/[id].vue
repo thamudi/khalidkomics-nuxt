@@ -42,7 +42,7 @@
     pending,
   } = await useCmsData(`comics/${route.params.id}?${get(query)}`, {
     cache: true,
-    client: true,
+    client: false,
   })
 
   const comicData = computed(() =>
@@ -53,5 +53,18 @@
   const comicUrl = computed(
     () => `${get(comicData).archive.slug}/${get(comicData).id}`
   )
+
+  const { seoTitle, seoDescription, seoImage } = useComicSeo(comicData)
+
+  useSeoMeta({
+    title: () => get(seoTitle),
+    ogTitle: () => get(seoTitle),
+    twitterTitle: () => get(seoTitle),
+    description: () => get(seoDescription),
+    ogDescription: () => get(seoDescription),
+    twitterDescription: () => get(seoDescription),
+    ogImage: () => get(seoImage),
+    twitterImage: () => get(seoImage),
+  })
 </script>
 <style scoped lang="postcss"></style>
