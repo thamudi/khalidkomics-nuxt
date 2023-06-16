@@ -31,7 +31,7 @@
             @click="() => shareTo()"
           />
         </div>
-        <!-- <div>
+        <div>
           <nuxt-img
             width="60"
             height="60"
@@ -57,7 +57,7 @@
             src="/images/icons/twitter.svg"
             @click="() => shareOnSocialMedia('tweet')"
           />
-        </div> -->
+        </div>
       </div>
     </div>
   </div>
