@@ -26,6 +26,15 @@
           <nuxt-img
             width="60"
             height="60"
+            alt="native-share"
+            src="/images/icons/copy_link.svg"
+            @click="() => shareTo()"
+          />
+        </div>
+        <div>
+          <nuxt-img
+            width="60"
+            height="60"
             alt="facebook-share"
             src="/images/icons/facebook.svg"
             @click="() => shareOnSocialMedia('fb')"
@@ -93,6 +102,16 @@
         }
         break
     }
+  }
+
+  const shareTo = () => {
+    const url = `${window.location.origin}/comic/${props.comicUrl}`
+    navigator
+      .share({
+        url: url,
+      })
+      .then(() => console.log('Successful share! 🎉'))
+      .catch((err) => console.error(err))
   }
 </script>
 <style scoped lang="postcss">
