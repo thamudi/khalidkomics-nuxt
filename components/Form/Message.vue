@@ -1,16 +1,16 @@
 <template>
   <dialog
     ref="dialog"
-    :class="`${type} p-8 rounded-[40px] border-4 border-kk-blue-dark max-w-[50%] w-full`"
+    :class="`${type} p-8 rounded-[40px] border-4 border-kk-blue-dark max-w-[90%] w-full lg:max-w-[50%]`"
   >
-    <div class="flex flex-row justify-between items-center mb-2">
+    <div class="flex flex-col justify-between items-center mb-2">
       <p>{{ t(message) }}</p>
       <div class="flex flex-row gap-x-4 align-top">
         <nuxt-img
           :src="`/images/contact/${type}.svg`"
           :alt="`${type}`"
-          width="120"
-          height="120"
+          width="150"
+          height="150"
         />
       </div>
     </div>
