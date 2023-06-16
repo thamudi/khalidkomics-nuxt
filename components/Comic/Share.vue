@@ -123,6 +123,7 @@
       .then(() => console.log('Successful share! 🎉'))
       .catch((err) => console.error(err))
   }
+  
 </script>
 <style scoped lang="postcss">
   .footnote-container {
