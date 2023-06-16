@@ -40,15 +40,6 @@
             @click="() => shareOnSocialMedia('fb')"
           />
         </div>
-        <div v-if="false">
-          <nuxt-img
-            width="60"
-            height="60"
-            alt="instagram-share"
-            src="/images/icons/instagram.svg"
-            @click="() => shareOnSocialMedia('instagram')"
-          />
-        </div>
         <div>
           <nuxt-img
             width="60"
@@ -68,7 +59,7 @@
   const { t } = useI18n()
   const message = ref('')
   const dialog = ref(null)
-  
+
   const props = defineProps({
     comicUrl: {
       type: String,
@@ -85,10 +76,6 @@
       case 'tweet':
         const tweetUrl = 'http://twitter.com/intent/tweet/?url='
         await navigateTo(`${tweetUrl}${url}`, { external: true })
-        break
-      case 'instagram':
-        const instagramUrl = 'https://www.instagram.com/create/story'
-        await navigateTo(`${instagramUrl}${url}`, { external: true })
         break
       default:
         try {
@@ -121,7 +108,7 @@
       .share({
         url: url,
       })
-      .then(() => console.log('Successful share! 🎉'))
+      .then()
       .catch((err) => console.error(err))
   }
 </script>
