@@ -19,10 +19,19 @@
             height="60"
             alt="copy-link"
             src="/images/icons/copy_link.svg"
-            @click="() => shareOnSocialMedia('')"
+            @click="() => copyToClipboard()"
           />
         </div>
         <div>
+          <nuxt-img
+            width="60"
+            height="60"
+            alt="native-share"
+            src="/images/icons/share.svg"
+            @click="() => shareTo()"
+          />
+        </div>
+        <!-- <div>
           <nuxt-img
             width="60"
             height="60"
@@ -48,7 +57,7 @@
             src="/images/icons/twitter.svg"
             @click="() => shareOnSocialMedia('tweet')"
           />
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -59,6 +68,7 @@
   const { t } = useI18n()
   const message = ref('')
   const dialog = ref(null)
+  const url = `${window.location.origin}/comic/${props.comicUrl}`
   const props = defineProps({
     comicUrl: {
       type: String,
@@ -67,8 +77,6 @@
   })
 
   const shareOnSocialMedia = async (socialMedia) => {
-    const url = `${window.location.origin}/comic/${props.comicUrl}`
-
     switch (socialMedia) {
       case 'fb':
         const facebookUrl = 'https://www.facebook.com/sharer/sharer.php?u='
@@ -94,6 +102,28 @@
         break
     }
   }
+
+  const copyToClipboard = () => {
+    try {
+      copy(url)
+      set(message, 'global.clipboard.success')
+    } catch (err) {
+      set(message, 'global.clipboard.error')
+    } finally {
+      dialog.value.showModal()
+    }
+  }
+
+  const shareTo = () => {
+    const url = `${window.location.origin}/comic/${props.comicUrl}`
+    navigator
+      .share({
+        url: url,
+      })
+      .then(() => console.log('Successful share! 🎉'))
+      .catch((err) => console.error(err))
+  }
+  
 </script>
 <style scoped lang="postcss">
   .footnote-container {
