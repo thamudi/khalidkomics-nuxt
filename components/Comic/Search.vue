@@ -1,14 +1,14 @@
 <template>
   <div id="search">
     <form class="mx-4" @submit.prevent="search">
-      <label for="text" class="hidden">search</label>
+      <label for="searchText" class="hidden">search</label>
       <input
-        name="text"
+        name="searchText"
         type="text"
+        id="search-input"
         :placeholder="`${t(props.text)} ${props.value}`"
       />
-      <!-- <input type="submit" value="Submit!" /> -->
-      <button class="w-[2.75rem]" type="submit"></button>
+      <button name="search-button" class="w-[2.75rem]" type="submit">.</button>
     </form>
   </div>
 </template>
@@ -27,10 +27,10 @@
   })
 
   const search = async (e) => {
-    const { value } = e.target.text
+    const { value } = e.target.searchText
     const url = route.params.slug
-      ? `/archive/search/${route.params.slug}?q=${value}`
-      : `/archive/search?q=${value}`
+      ? `/archive/search/${route.params.slug}?q=${value.toLowerCase()}`
+      : `/archive/search?q=${value.toLowerCase()}`
     await navigateTo(url)
   }
 </script>
@@ -48,6 +48,7 @@
   }
 
   #search input[type='text'] {
+    @apply lowercase;
     @apply w-full;
     @apply px-5 py-3 text-center;
     @apply bg-kk-blue-light;

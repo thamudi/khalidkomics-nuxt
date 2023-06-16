@@ -14,29 +14,37 @@
     @change-sort-order="setSortOrder"
   />
   <div v-if="!pending && !error">
-    <div class="comics-list-container">
-      <div v-for="(comic, idx) in archiveList.data" :key="`${comic.id}-${idx}`">
-        <NuxtLink
-          :to="`/comic/${comic.attributes.archive.data.attributes.title}/${comic.id}`"
-          class="flex items-center m-4 p-4"
+    <div v-if="archiveList.data.length">
+      <div class="comics-list-container">
+        <div
+          v-for="(comic, idx) in archiveList.data"
+          :key="`${comic.id}-${idx}`"
         >
-          <nuxt-img
-            width="100"
-            height="100"
-            class="thumbnail"
-            :alt="comic.attributes.title"
-            :src="comic.attributes.thumbnail.data.attributes.url"
-          />
-          <div>
-            <h3 class="font-bold">
-              {{ comic.attributes.title }}
-            </h3>
-            <span class="text-gray-400">
-              {{ useDateFormatter(comic.attributes.releaseDate) }}
-            </span>
-          </div>
-        </NuxtLink>
+          <NuxtLink
+            :to="`/comic/${comic.attributes.archive.data.attributes.title}/${comic.id}`"
+            class="flex items-center m-4 p-4"
+          >
+            <nuxt-img
+              width="100"
+              height="100"
+              class="thumbnail"
+              :alt="comic.attributes.title"
+              :src="comic.attributes.thumbnail.data.attributes.url"
+            />
+            <div>
+              <h3 class="font-bold">
+                {{ comic.attributes.title }}
+              </h3>
+              <span class="text-gray-400">
+                {{ useDateFormatter(comic.attributes.releaseDate) }}
+              </span>
+            </div>
+          </NuxtLink>
+        </div>
       </div>
+    </div>
+    <div class="container text-center" v-else>
+      {{ t('search.not-found') }} {{ route.query.q }}
     </div>
     <GlobalPagination
       v-if="pagination.total > 5"

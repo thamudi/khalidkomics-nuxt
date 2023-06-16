@@ -27,7 +27,8 @@
   "search": {
     "placeholder": "Search for specific comics ...",
     "alternative-placeholder": "Search for comics in",
-    "result-title": "Search Results for"
+    "result-title": "Search Results for",
+    "not-found": "No comics were found with the keywords "
   },
   "contact": {
     "title": "Send me a message and I'll get back to you!"
