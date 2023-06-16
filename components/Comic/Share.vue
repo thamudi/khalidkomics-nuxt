@@ -68,7 +68,7 @@
   const { t } = useI18n()
   const message = ref('')
   const dialog = ref(null)
-  const url = `${window.location.origin}/comic/${props.comicUrl}`
+  
   const props = defineProps({
     comicUrl: {
       type: String,
@@ -104,6 +104,7 @@
   }
 
   const copyToClipboard = () => {
+    const url = `${window.location.origin}/comic/${props.comicUrl}`
     try {
       copy(url)
       set(message, 'global.clipboard.success')
@@ -123,7 +124,6 @@
       .then(() => console.log('Successful share! 🎉'))
       .catch((err) => console.error(err))
   }
-  
 </script>
 <style scoped lang="postcss">
   .footnote-container {
