@@ -96,13 +96,6 @@
   }
 </script>
 <style scoped lang="postcss">
-  .share-container,
-  .footnote-container {
-    @apply m-auto p-1 pt-0 mt-9;
-    @apply w-[98%] max-w-[490px];
-    /* border-width: 3px; */
-  }
-
   .footnote-container {
     @apply border-b-0;
   }

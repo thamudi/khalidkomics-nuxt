@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full mx-4 flex flex-row-reverse">
+  <div class="w-full flex flex-row-reverse">
     <nuxt-img
       :src="`/images/icons/sort_${props.sortOrder}.svg`"
       :alt="props.sortOrder"

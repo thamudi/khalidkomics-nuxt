@@ -12,6 +12,13 @@ body:lang(ar) {
   direction: ltr;
 }
 
+.share-container,
+.footnote-container {
+  @apply m-auto p-1 pt-0 mt-9;
+  @apply w-[98%] max-w-[490px];
+  /* border-width: 3px; */
+}
+
 /* Animations */
 
 .animate-wiggle:focus,

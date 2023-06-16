@@ -1,6 +1,7 @@
 <template>
   <div id="search">
     <form class="mx-4" @submit.prevent="search">
+      <label for="text" class="hidden">search</label>
       <input
         name="text"
         type="text"
