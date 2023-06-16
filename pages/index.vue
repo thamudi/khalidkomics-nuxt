@@ -5,6 +5,10 @@
       :comic-pagination="comicPaginationData"
       @change-comic="setPage"
     />
+    <ComicNotes
+      v-if="comicsData.authorsNote"
+      :authors-notes="comicsData.authorsNote"
+    />
     <ComicShare :comic-url="comicUrl" />
   </div>
   <div v-else>

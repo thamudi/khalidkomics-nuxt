@@ -1,6 +1,10 @@
 <template>
   <div v-if="!pending && !error">
     <ComicSlider :comic="comicData" />
+    <ComicNotes
+      v-if="comicData.authorsNote"
+      :authors-notes="comicData.authorsNote"
+    />
     <ComicShare :comic-url="`${comicUrl}`" />
   </div>
   <div v-else>
