@@ -7,7 +7,8 @@
         type="text"
         :placeholder="`${t(props.text)} ${props.value}`"
       />
-      <input type="submit" value="Submit!" />
+      <!-- <input type="submit" value="Submit!" /> -->
+      <button class="w-[2.75rem]" type="submit"></button>
     </form>
   </div>
 </template>
@@ -58,7 +59,8 @@
     @apply border-black  px-5 py-3 border-b-[3px] bg-kk-blue-light;
   }
 
-  #search input[type='submit'] {
+  #search input[type='submit'],
+  #search button {
     @apply h-[50px];
     @apply bg-search-icon bg-no-repeat bg-center text-transparent;
     @apply absolute right-[0.15rem] top-[0.15rem];
