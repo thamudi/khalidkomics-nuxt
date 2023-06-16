@@ -68,7 +68,7 @@
   const { t } = useI18n()
   const message = ref('')
   const dialog = ref(null)
-
+  
   const props = defineProps({
     comicUrl: {
       type: String,
