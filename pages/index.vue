@@ -43,6 +43,12 @@
     )
   )
 
+  const seoQuery = computed(() =>
+    qs.stringify({
+      populate: 'deep',
+    })
+  )
+
   const {
     data: comics,
     error,
@@ -58,6 +64,8 @@
     }
   )
 
+  const { data: seoData, error: seoError } = useCmsData(`seo?${get(seoQuery)}`)
+
   const comicsData = computed(() => get(comics).data[0].attributes)
   const comicUrl = computed(
     () =>
@@ -65,6 +73,19 @@
         get(comics).data[0].id
       }`
   )
+
+  const { seoTitle, seoImage, seoDescription } = useSeo(seoData)
+
+  useSeoMeta({
+    title: () => get(seoTitle),
+    ogTitle: () => get(seoTitle),
+    twitterTitle: () => get(seoTitle),
+    description: () => get(seoDescription),
+    ogDescription: () => get(seoDescription),
+    twitterDescription: () => get(seoDescription),
+    ogImage: () => get(seoImage),
+    twitterImage: () => get(seoImage),
+  })
 
   const comicPaginationData = computed(() => {
     return {
