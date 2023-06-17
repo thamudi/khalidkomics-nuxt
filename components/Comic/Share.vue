@@ -68,6 +68,7 @@
   })
 
   const shareOnSocialMedia = async (socialMedia) => {
+    const url = `${window.location.origin}/comic/${props.comicUrl}`
     switch (socialMedia) {
       case 'fb':
         const facebookUrl = 'https://www.facebook.com/sharer/sharer.php?u='
