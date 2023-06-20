@@ -55,8 +55,8 @@
 </template>
 <script setup>
   import copy from 'copy-to-clipboard'
-  import { set } from '@vueuse/core'
-  const { t } = useI18n()
+  import { get, set } from '@vueuse/core'
+  const { t, locale } = useI18n()
   const message = ref('')
   const dialog = ref(null)
 
@@ -67,8 +67,10 @@
     },
   })
 
+  const lang = computed(() => (get(locale) === 'ar' ? '/ar' : ''))
+
   const shareOnSocialMedia = async (socialMedia) => {
-    const url = `${window.location.origin}/comic/${props.comicUrl}`
+    const url = `${window.location.origin}${get(lang)}/comic/${props.comicUrl}`
     switch (socialMedia) {
       case 'fb':
         const facebookUrl = 'https://www.facebook.com/sharer/sharer.php?u='
@@ -92,7 +94,7 @@
   }
 
   const copyToClipboard = () => {
-    const url = `${window.location.origin}/comic/${props.comicUrl}`
+    const url = `${window.location.origin}${get(lang)}/comic/${props.comicUrl}`
     try {
       copy(url)
       set(message, 'global.clipboard.success')
@@ -104,7 +106,7 @@
   }
 
   const shareTo = () => {
-    const url = `${window.location.origin}/comic/${props.comicUrl}`
+    const url = `${window.location.origin}${get(lang)}/comic/${props.comicUrl}`
     navigator
       .share({
         url: url,

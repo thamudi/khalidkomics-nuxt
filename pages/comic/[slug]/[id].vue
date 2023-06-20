@@ -15,7 +15,9 @@
   import qs from 'qs'
   import { get } from '@vueuse/core'
   const route = useRoute()
+  const router = useRouter()
   const { locale } = useI18n()
+  const localePath = useLocalePath()
 
   const query = computed(() =>
     qs.stringify(
@@ -65,6 +67,17 @@
     twitterDescription: () => get(seoDescription),
     ogImage: () => get(seoImage),
     twitterImage: () => get(seoImage),
+  })
+
+  watch(locale, async () => {
+    const comicTranslation = get(comicData)?.localizations
+    if (comicTranslation.length) {
+      router.push(
+        localePath(`/comic/${route.params.slug}/${comicTranslation[0].id}`)
+      )
+    } else {
+      router.push(localePath('/'))
+    }
   })
 </script>
 <style scoped lang="postcss"></style>
