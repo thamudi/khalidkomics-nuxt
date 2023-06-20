@@ -17,6 +17,8 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxt/image-edge',
     'nuxt-swiper',
+    'nuxt-simple-sitemap',
+    '@nuxtjs/robots',
   ],
 
   apiParty: {
@@ -65,6 +67,9 @@ export default defineNuxtConfig({
     smtpPass: '',
     smtpHost: '',
     mailTo: '',
+    public: {
+      siteUrl: '',
+    },
   },
 
   typescript: {
