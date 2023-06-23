@@ -1,6 +1,12 @@
 <template>
   <div v-if="imageFormats.includes(mediaFormat)">
-    <nuxt-img :src="fullUrl" :alt="mediaObject.hash" />
+    <nuxt-img
+      format="webp"
+      width="500"
+      height="600"
+      :src="fullUrl"
+      :alt="mediaObject.hash"
+    />
   </div>
   <div v-else>
     <video

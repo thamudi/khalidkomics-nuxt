@@ -59,6 +59,7 @@
       </div>
       <div class="flex flex-row-reverse relative mt-4">
         <nuxt-img
+          format="webp"
           alt="khalid-komics"
           width="150"
           height="150"
