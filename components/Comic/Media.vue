@@ -10,7 +10,7 @@
   </div>
   <div v-else>
     <div class="relative">
-      <div class="absolute bottom-11 left-14 cursor-pointer">
+      <div class="absolute bottom-11 left-8 lg:left-14 cursor-pointer">
         <div class="p-2 rounded-full static mr-4 mb-4 bg-kk-blue-dark">
           <div v-if="muted">
             <svg
