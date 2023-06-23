@@ -25,6 +25,7 @@
             class="flex items-center m-4 p-4"
           >
             <nuxt-img
+              format="webp"
               width="100"
               height="100"
               class="thumbnail"

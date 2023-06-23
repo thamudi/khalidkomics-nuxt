@@ -18,6 +18,7 @@
           </span>
         </div>
         <nuxt-img
+          format="webp"
           class="overlay-rounded-corners"
           :src="archive.attributes.thumbnail.data.attributes.url"
           :alt="archive.attributes.slug"

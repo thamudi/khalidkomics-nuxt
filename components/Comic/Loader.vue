@@ -8,6 +8,7 @@
       height="250"
     />
     <nuxt-img
+      format="webp"
       v-else
       src="/images/fail.jpg"
       alt="loading"
