@@ -31,6 +31,13 @@
       {
         populate: '*',
         sort: ['releaseDate:desc'],
+        filters: {
+          category: {
+            slug: {
+              $null: true,
+            },
+          },
+        },
         pagination: {
           page: get(currentPage),
           pageSize: 1,

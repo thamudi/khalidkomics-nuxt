@@ -6,8 +6,14 @@
   </div>
   <ClientOnly>
     <Swiper
-      :modules="[SwiperEffectCreative, SwiperThumbs, SwiperPagination]"
+      :modules="[
+        SwiperEffectCreative,
+        SwiperThumbs,
+        SwiperPagination,
+        SwiperZoom,
+      ]"
       :slides-per-view="1"
+      :zoom="true"
       :loop="false"
       :effect="'creative'"
       :pagination="{
@@ -53,10 +59,11 @@
 <style scoped lang="postcss">
   .swiper-creative {
     @apply lg:w-[500px];
-    @apply lg:h-[500px];
+    /* @apply lg:h-[500px]; */
   }
   .swiper-slide {
     @apply lg:w-[500px];
-    @apply lg:h-[550px];
+    @apply lg:px-4;
+    /* @apply lg:h-[550px]; */
   }
 </style>
