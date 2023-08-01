@@ -63,7 +63,6 @@
   }
   .swiper-slide {
     @apply lg:w-[500px];
-    @apply lg:px-4;
     /* @apply lg:h-[550px]; */
   }
 </style>

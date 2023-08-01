@@ -72,6 +72,11 @@
               $eq: route.params.slug,
             },
           },
+          category: {
+            slug: {
+              $null: true,
+            },
+          },
         },
         pagination: {
           pageSize: 5,

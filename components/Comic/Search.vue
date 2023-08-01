@@ -28,7 +28,7 @@
 
   const search = async (e) => {
     const { value } = e.target.searchText
-    const url = route.params.slug
+    const url = Number(route.params.slug)
       ? `/archive/search/${route.params.slug}?q=${value.toLowerCase()}`
       : `/archive/search?q=${value.toLowerCase()}`
     await navigateTo(url)
