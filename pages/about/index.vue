@@ -11,9 +11,7 @@
           :alt="aboutData.AboutTitle"
           :src="imageBanner"
         />
-        <div id="authorBlurb">
-          <p class="mt-4">{{ aboutData.Content }}</p>
-        </div>
+        <div id="authorBlurb" v-html="aboutData.Content"></div>
       </div>
     </div>
   </div>

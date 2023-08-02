@@ -1,7 +1,7 @@
 <template>
   <div class="footnote-container">
     <div class="flex flex-col items-center">
-      <p class="py-4 px-6">{{ props.authorsNotes }}</p>
+      <div class="py-4 px-6" v-html="props.authorsNotes"></div>
     </div>
   </div>
 </template>
