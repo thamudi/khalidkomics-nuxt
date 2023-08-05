@@ -1,5 +1,5 @@
 <template>
-  <div v-if="imageFormats.includes(mediaFormat)">
+  <div class="swiper-zoom-container" v-if="imageFormats.includes(mediaFormat)">
     <nuxt-img
       format="webp"
       width="500"
@@ -99,3 +99,8 @@
     set(muted, !get(muted))
   }
 </script>
+<style lang="postcss" scoped>
+  .swiper-zoom-container {
+    @apply block;
+  }
+</style>
