@@ -11,7 +11,11 @@
           :alt="aboutData.AboutTitle"
           :src="imageBanner"
         />
-        <div id="authorBlurb" v-html="aboutData.Content"></div>
+        <div
+          id="authorBlurb"
+          class="flex w-full flex-col justify-around"
+          v-html="aboutData.Content"
+        ></div>
       </div>
     </div>
   </div>
@@ -60,8 +64,8 @@
   .subPage {
     @apply m-auto mb-3;
     @apply p-3 pt-0;
-    @apply outline;
-    @apply outline-kk-blue-dark outline-[3px] max-w-[98%] w-[1000px];
+    /* @apply outline; */
+    @apply border-b-[3px] border-kk-blue-dark max-w-[98%] w-[1000px];
   }
 
   .subPage .wrapper {

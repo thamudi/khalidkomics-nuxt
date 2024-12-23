@@ -1,13 +1,14 @@
 <template>
-  <div class="lg:w-1/2 relative lg:container">
+  <div class="lg:w-3/5 relative lg:container">
     <FormMessage
       v-if="submitted"
       :type="response.type"
       :message="response.message"
       @close-dialog="closeDialog"
     />
+    <UiSocialMedia />
     <form
-      class="border-4 border-black p-8 my-16"
+      class="border-y-4 border-black p-8 my-16"
       @submit.prevent="submitForm"
       action="/api/contact"
       method="post"
