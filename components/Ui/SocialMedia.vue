@@ -1,15 +1,15 @@
 <template>
-  <div class="flex flex-row justify-between mt-14">
-    <div class="flex items-stretch">
+  <div class="flex lg:flex-row flex-col justify-between mt-14">
+    <div class="flex flex-col-reverse lg:flex-row items-stretch">
       <nuxt-img
         width="300"
         height="300"
         alt="kk-thumbsup"
         src="/images/kk-thumbs-up.jpg"
       />
-      <h2>{{ t('social.title') }}</h2>
+      <h1 class="text-center">{{ t('social.title') }}</h1>
     </div>
-    <div v-if="!error" class="flex flex-col gap-x-4 justify-between">
+    <div v-if="!error" class="flex lg:flex-col gap-x-4 justify-between">
       <span
         v-for="item in socialMediaData"
         :id="`${item.socialNetwork.toLowerCase()}-${item.id}`"
