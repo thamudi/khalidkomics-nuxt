@@ -7,75 +7,82 @@
       @close-dialog="closeDialog"
     />
     <UiSocialMedia />
-    <form
-      class="border-y-4 border-black p-8 my-16"
-      @submit.prevent="submitForm"
-      action="/api/contact"
-      method="post"
-      id="contactForm"
-    >
-      <div class="flex flex-col gap-y-4">
-        <h1 class="text-center">{{ t('contact.title') }}</h1>
-        <div class="flex justify-between gap-x-6">
-          <label for="fname" class="hidden">First Name</label>
+    <div v-if="mode == 'dev'">
+      <form
+        class="border-y-4 border-black p-8 my-16"
+        @submit.prevent="submitForm"
+        method="post"
+        id="contactForm"
+      >
+        <div class="flex flex-col gap-y-4">
+          <h1 class="text-center">{{ t('contact.title') }}</h1>
+          <div class="flex justify-between gap-x-6">
+            <label for="fname" class="hidden">First Name</label>
+            <input
+              type="text"
+              id="fname"
+              v-model="form.first_name"
+              name="first_name"
+              :placeholder="`${t('form.fname')}`"
+            />
+            <label for="lname" class="hidden">Last Name</label>
+            <input
+              type="text"
+              v-model="form.last_name"
+              name="last_name"
+              id="lname"
+              :placeholder="`${t('form.lname')}`"
+            />
+          </div>
+          <label for="email" class="hidden">Email</label>
           <input
-            type="text"
-            id="fname"
-            v-model="form.first_name"
-            name="first_name"
-            :placeholder="`${t('form.fname')}`"
+            type="email"
+            id="email"
+            v-model="form.email"
+            name="email"
+            :placeholder="`${t('form.email')}`"
           />
-          <label for="lname" class="hidden">Last Name</label>
-          <input
-            type="text"
-            v-model="form.last_name"
-            name="last_name"
-            id="lname"
-            :placeholder="`${t('form.lname')}`"
+          <label for="message" class="hidden">Message</label>
+          <textarea
+            class="h-52"
+            v-model="form.message"
+            name="message"
+            id="message"
+            :placeholder="`${t('form.message')}`"
+          ></textarea>
+          <button
+            :disabled="disabled"
+            class="`bg-link-blue px-2 py-1 w-fit font-bold border-black border-2 ${ disabled ? 'opacity-50' : 'opacity-100' }`}"
+            type="submit"
+          >
+            {{ t('form.submit') }}
+          </button>
+        </div>
+        <div class="flex flex-row-reverse relative mt-4">
+          <nuxt-img
+            format="webp"
+            alt="khalid-komics"
+            width="150"
+            height="150"
+            src="/images/contact/illustration.svg"
+            class="absolute -bottom-16"
           />
         </div>
-        <label for="email" class="hidden">Email</label>
-        <input
-          type="email"
-          id="email"
-          v-model="form.email"
-          name="email"
-          :placeholder="`${t('form.email')}`"
-        />
-        <label for="message" class="hidden">Message</label>
-        <textarea
-          class="h-52"
-          v-model="form.message"
-          name="message"
-          id="message"
-          :placeholder="`${t('form.message')}`"
-        ></textarea>
-        <button
-          :disabled="disabled"
-          class="`bg-link-blue px-2 py-1 w-fit font-bold border-black border-2 ${ disabled ? 'opacity-50' : 'opacity-100' }`}"
-          type="submit"
-        >
-          {{ t('form.submit') }}
-        </button>
-      </div>
-      <div class="flex flex-row-reverse relative mt-4">
-        <nuxt-img
-          format="webp"
-          alt="khalid-komics"
-          width="150"
-          height="150"
-          src="/images/contact/illustration.svg"
-          class="absolute -bottom-16"
-        />
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
 </template>
 <script setup>
   import { get, set } from '@vueuse/core'
 
+  const config = useRuntimeConfig()
+
   const { t } = useI18n()
   const disabled = ref(false)
+  const mode = ref(config.nodeEnv)
+  console.log('config: ', config.nodeEnv)
+  console.log('Ref: ', mode.value)
+
   const submitted = ref(false)
   const form = reactive({
     first_name: '',

@@ -62,12 +62,14 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    smtpPort: '',
     smtpEmail: '',
     smtpPass: '',
-    smtpHost: '',
+    sendgridApiKey: '',
     mailTo: '',
+    nodeEnv: '',
     public: {
+      nodeEnv: '',
+      sendgridApiKey: '',
       siteUrl: '',
     },
   },
