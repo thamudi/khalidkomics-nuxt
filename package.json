@@ -37,6 +37,6 @@
     "typed.js": "^2.0.16"
   },
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   }
 }
