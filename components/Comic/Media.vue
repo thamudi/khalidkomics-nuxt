@@ -67,6 +67,13 @@
 <script setup>
   import { get, set } from '@vueuse/core'
 
+  const props = defineProps({
+    comic: {
+      type: Object,
+      default: () => {},
+    },
+  })
+
   const mediaObject = get(
     props.comic.attributes ? props.comic.attributes : props.comic
   )
@@ -85,13 +92,6 @@
     mediaObject.url.split('.')[mediaObject.url.split('.').length - 1]
   const video = ref(null)
   const muted = ref(true)
-
-  const props = defineProps({
-    comic: {
-      type: Object,
-      default: () => {},
-    },
-  })
 
   const toggleMute = () => {
     video.value.defaultMuted = !video.value.defaultMuted

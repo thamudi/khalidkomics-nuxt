@@ -15,9 +15,9 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@vueuse/nuxt',
     '@nuxtjs/tailwindcss',
-    '@nuxt/image-edge',
+    '@nuxt/image',
     'nuxt-swiper',
-    'nuxt-simple-sitemap',
+    '@nuxtjs/sitemap',
     '@nuxtjs/robots',
   ],
 
@@ -42,14 +42,14 @@ export default defineNuxtConfig({
       {
         code: 'en',
         name: 'English',
-        iso: 'en',
+        language: 'en',
         dir: 'ltr',
         file: 'en.json',
       },
       {
         code: 'ar',
         name: 'العربية',
-        iso: 'ar',
+        language: 'ar',
         dir: 'rtl',
         file: 'ar.json',
       },
@@ -57,7 +57,7 @@ export default defineNuxtConfig({
     lazy: true,
     langDir: 'lang',
     defaultLocale: 'en',
-    baseUrl: 'http://localhost:3000/',
+    baseUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000/',
     debug: false,
   },
 
@@ -72,6 +72,10 @@ export default defineNuxtConfig({
       sendgridApiKey: '',
       siteUrl: '',
     },
+  },
+
+  image: {
+    domains: (process.env.NUXT_IMAGE_DOMAINS || '').split(',').filter(Boolean),
   },
 
   typescript: {

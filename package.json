@@ -12,8 +12,8 @@
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
-    "@nuxt/image-edge": "^1.0.0-28059208.2abef1b",
-    "@nuxtjs/i18n": "^8.0.0-beta.12",
+    "@nuxt/image": "^1.0.0",
+    "@nuxtjs/i18n": "^9.5.6",
     "@nuxtjs/tailwindcss": "^6.7.0",
     "@types/node": "^18",
     "@types/nodemailer": "^6.4.8",
@@ -27,16 +27,16 @@
   "dependencies": {
     "@nuxtjs/html-validator": "^1.3.1",
     "@nuxtjs/robots": "^3.0.0",
-    "@sendgrid/mail": "^8.1.4",
+    "@sendgrid/mail": "^8.1.6",
     "copy-to-clipboard": "^3.3.3",
     "nodemailer": "^6.9.3",
-    "nuxt-simple-sitemap": "^2.7.0",
-    "nuxt-swiper": "^1.1.0",
+    "@nuxtjs/sitemap": "^6.0.0",
+    "nuxt-swiper": "^1.2.2",
     "qs": "^6.11.2",
-    "swiper": "9.4.1",
+    "swiper": "^10.3.1",
     "typed.js": "^2.0.16"
   },
   "engines": {
-    "node": "18.x"
+    "node": ">=20"
   }
 }
