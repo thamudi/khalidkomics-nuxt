@@ -32,7 +32,7 @@
     "nodemailer": "^6.9.3",
     "@nuxtjs/sitemap": "^6.0.0",
     "nuxt-swiper": "^1.2.2",
-    "qs": "^6.11.2",
+    "qs": "^6.15.2",
     "swiper": "^10.3.1",
     "typed.js": "^2.0.16"
   },
