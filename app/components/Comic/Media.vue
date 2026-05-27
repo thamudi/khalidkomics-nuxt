@@ -1,5 +1,5 @@
 <template>
-  <div v-if="imageFormats.includes(mediaFormat)">
+  <div v-if="imageFormats.includes(mediaFormat)" class="swiper-zoom-container">
     <nuxt-img
       format="webp"
       width="500"
