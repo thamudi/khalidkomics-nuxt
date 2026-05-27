@@ -31,9 +31,9 @@
     "copy-to-clipboard": "^4.0.2",
     "nodemailer": "^6.9.3",
     "@nuxtjs/sitemap": "^8.0.15",
-    "nuxt-swiper": "^1.2.2",
+    "nuxt-swiper": "^2.0.2",
     "qs": "^6.15.2",
-    "swiper": "^10.3.1"
+    "swiper": "^12.1.4"
   },
   "engines": {
     "node": ">=20"

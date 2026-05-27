@@ -5,41 +5,15 @@
     <span>{{ useDateFormatter(props.comic.releaseDate) }}</span>
   </div>
   <ClientOnly>
-    <Swiper
-      :modules="[
-        SwiperEffectCreative,
-        SwiperThumbs,
-        SwiperPagination,
-        SwiperZoom,
-      ]"
-      :slides-per-view="1"
-      :zoom="true"
-      :loop="false"
-      :effect="'creative'"
-      :pagination="{
-        clickable: true,
-        enabled: true,
-        dynamicBullets: true,
-      }"
-      :autoplay="{
-        delay: 8000,
-        disableOnInteraction: true,
-      }"
-      :creative-effect="{
-        prev: {
-          shadow: false,
-          translate: ['-20%', 0, -1],
-        },
-        next: {
-          translate: ['100%', 0, 0],
-        },
-      }"
-    >
-      <SwiperSlide v-for="(slide, idx) in comicSlides" :key="idx">
-        <ComicMedia :comic="slide" />
-      </SwiperSlide>
-      <ComicSliderControls />
-    </Swiper>
+    <div class="flex items-center gap-2 w-fit mx-auto">
+      <ComicSliderControls direction="prev" :swiper="swiper" />
+      <swiper-container ref="swiperRef" :init="false">
+        <swiper-slide v-for="(slide, idx) in comicSlides" :key="idx">
+          <ComicMedia :comic="slide" />
+        </swiper-slide>
+      </swiper-container>
+      <ComicSliderControls direction="next" :swiper="swiper" />
+    </div>
   </ClientOnly>
 </template>
 
@@ -54,15 +28,34 @@
   const comicSlides = computed(() => {
     return props.comic.comic.data ? props.comic.comic.data : props.comic.comic
   })
+
+  const swiperRef = ref(null)
+  const swiper = useSwiper(swiperRef, {
+    slidesPerView: 1,
+    zoom: true,
+    loop: false,
+    effect: 'creative',
+    pagination: {
+      clickable: true,
+      enabled: true,
+      dynamicBullets: true,
+    },
+    creativeEffect: {
+      prev: { shadow: false, translate: ['-2%', 0, -1] },
+      next: { translate: ['100%', 0, 0] },
+    },
+  })
 </script>
 
-<style scoped lang="postcss">
-  .swiper-creative {
-    @apply lg:w-[500px];
-    /* @apply lg:h-[500px]; */
+<style>
+  swiper-container {
+    display: block;
+    width: min(500px, calc(100vw - 8rem));
   }
-  .swiper-slide {
-    @apply lg:w-[500px];
-    /* @apply lg:h-[550px]; */
+
+  swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>
