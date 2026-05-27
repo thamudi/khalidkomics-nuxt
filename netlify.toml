@@ -1,6 +1,6 @@
 [build]
-  command = "nuxt generate"
-  publish = "dist"
+command = "nuxt generate"
+publish = ".output/public"
 
 [build.environment]
-  NODE_VERSION = "20"
+NODE_VERSION = "20"
