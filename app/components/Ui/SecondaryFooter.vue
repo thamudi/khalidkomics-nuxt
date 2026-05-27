@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row justify-between mt-14">
+  <div class="flex flex-row justify-between mt-20">
     <div class="flex items-center">
       <nuxt-img
         src="/images/shukri.svg"

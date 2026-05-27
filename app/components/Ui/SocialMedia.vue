@@ -6,8 +6,9 @@
         height="300"
         alt="kk-thumbsup"
         src="/images/kk-thumbs-up.jpg"
+        class="mx-auto"
       />
-      <h1 class="text-center">{{ t('social.title') }}</h1>
+      <h1 class="text-center my-auto font-bold px-2 text-2xl">{{ t('social.title') }}</h1>
     </div>
     <div v-if="!error" class="flex lg:flex-col gap-x-4 justify-between">
       <span
