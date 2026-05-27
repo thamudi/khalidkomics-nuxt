@@ -60,7 +60,6 @@
       return $cms(`archives?${get(query)}`, { cache: true })
     },
     {
-      server: false,
       watch: [query],
     }
   )

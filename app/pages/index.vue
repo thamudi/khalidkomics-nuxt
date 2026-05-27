@@ -66,7 +66,6 @@
       return $cms(`comics?${get(query)}`, { cache: true })
     },
     {
-      server: false,
       watch: [query],
     }
   )
