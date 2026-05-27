@@ -1,5 +1,5 @@
 <template>
-  <div class="swiper-zoom-container" v-if="imageFormats.includes(mediaFormat)">
+  <div v-if="imageFormats.includes(mediaFormat)">
     <nuxt-img
       format="webp"
       width="500"
@@ -8,9 +8,8 @@
       :alt="mediaObject.hash"
     />
   </div>
-  <div v-else>
-    <div class="relative">
-      <div class="absolute bottom-11 left-8 lg:left-14 cursor-pointer">
+  <div v-else class="relative w-[500px] mx-auto">
+      <div class="absolute bottom-3 start-3 cursor-pointer">
         <div class="p-2 rounded-full static mr-4 mb-4 bg-kk-blue-dark">
           <div v-if="muted">
             <svg
@@ -57,15 +56,21 @@
         :key="props.comic.id"
         @click="toggleMute"
         ref="video"
-        class="mb-4 cursor-pointer w-[500px] h-[500px]"
+        class="mb-4 cursor-pointer mx-auto w-[500px] h-[500px]"
       >
         <source :src="`${fullUrl}`" />
       </video>
     </div>
-  </div>
 </template>
 <script setup>
   import { get, set } from '@vueuse/core'
+
+  const props = defineProps({
+    comic: {
+      type: Object,
+      default: () => {},
+    },
+  })
 
   const mediaObject = get(
     props.comic.attributes ? props.comic.attributes : props.comic
@@ -86,21 +91,9 @@
   const video = ref(null)
   const muted = ref(true)
 
-  const props = defineProps({
-    comic: {
-      type: Object,
-      default: () => {},
-    },
-  })
-
   const toggleMute = () => {
     video.value.defaultMuted = !video.value.defaultMuted
     video.value.muted = !video.value.muted
     set(muted, !get(muted))
   }
 </script>
-<style lang="postcss" scoped>
-  .swiper-zoom-container {
-    @apply block;
-  }
-</style>

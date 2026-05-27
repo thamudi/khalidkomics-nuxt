@@ -44,8 +44,8 @@
           <nuxt-img
             width="60"
             height="60"
-            alt="twitter-share"
-            src="/images/icons/twitter.svg"
+            alt="x-share"
+            src="/images/icons/x.svg"
             @click="() => shareOnSocialMedia('tweet')"
           />
         </div>

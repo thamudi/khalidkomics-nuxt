@@ -33,7 +33,10 @@
     "not-found": "No comics were found with the keywords "
   },
   "contact": {
-    "title": "Send me a message and I'll get back to you!"
+    "title": "Or Send me a message and I'll get back to you!"
+  },
+  "social": {
+    "title": "Find me on social media!"
   },
   "form": {
     "fname": "First Name",

@@ -31,10 +31,10 @@
       link: '/categories/fanzeen',
       label: 'fanzeen',
     },
-    {
+ /**   {
       link: '/categories/graphic-novels',
       label: 'graphic-novels',
-    },
+    }, **/
     {
       link: '/about',
       label: 'about',

@@ -7,7 +7,7 @@
     {{ t('global.browse') }}
   </p>
   <div
-    v-if="!pending && !error"
+    v-if="archives && !pending && !error"
     class="grid grid-cols-2 gap-4 w-fit mx-auto my-4"
   >
     <div v-for="(archive, idx) in archivesData" :key="`${archive}-${idx}`">
@@ -35,7 +35,7 @@
 <script setup>
   import qs from 'qs'
   const { locale, t } = useI18n()
-  import { get, set } from '@vueuse/core'
+  import { get } from '@vueuse/core'
 
   const query = computed(() =>
     qs.stringify(
