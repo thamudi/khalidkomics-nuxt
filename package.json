@@ -19,7 +19,7 @@
     "@vueuse/core": "^14.3.0",
     "@vueuse/nuxt": "^14.3.0",
     "nuxt": "^3.5.1",
-    "nuxt-api-party": "^0.11.4",
+    "nuxt-api-party": "^2.2.8",
     "prettier": "^3.8.3",
     "typescript": "^6.0.3"
   },

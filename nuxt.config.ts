@@ -30,7 +30,7 @@ export default defineNuxtConfig({
         url: process.env.NUXT_API_PARTY_ENDPOINTS_CMS_URL!,
       },
     },
-    allowClient: true,
+    client: true,
   },
 
   css: [
