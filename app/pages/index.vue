@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!pending && !error">
+  <div v-if="comics && !pending && !error">
     <ComicSlider :comic="comicsData" />
     <ComicPagination
       :comic-pagination="comicPaginationData"
@@ -71,7 +71,7 @@
     }
   )
 
-  const { data: seoData, error: seoError } = useCmsData(`seo?${get(seoQuery)}`)
+  const { data: seoData } = useCmsData(`seo?${get(seoQuery)}`)
 
   const comicsData = computed(() => get(comics).data[0].attributes)
   const comicUrl = computed(

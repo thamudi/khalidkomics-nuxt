@@ -28,9 +28,9 @@ export default defineNuxtConfig({
     endpoints: {
       cms: {
         url: process.env.NUXT_API_PARTY_ENDPOINTS_CMS_URL!,
+        client: true,
       },
     },
-    client: true,
   },
 
   css: [
@@ -64,14 +64,9 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    smtpEmail: '',
-    smtpPass: '',
-    sendgridApiKey: '',
-    mailTo: '',
     nodeEnv: '',
     public: {
       nodeEnv: '',
-      sendgridApiKey: '',
       siteUrl: '',
     },
   },
@@ -80,7 +75,10 @@ export default defineNuxtConfig({
     domains: (process.env.NUXT_IMAGE_DOMAINS || '').split(',').filter(Boolean),
   },
 
-  typescript: {
-    shim: false,
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
   },
 })

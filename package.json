@@ -18,8 +18,8 @@
     "@types/node": "^22",
     "@vueuse/core": "^14.3.0",
     "@vueuse/nuxt": "^14.3.0",
-    "nuxt": "^3.5.1",
-    "nuxt-api-party": "^2.2.8",
+    "nuxt": "^4.4.6",
+    "nuxt-api-party": "^3.4.2",
     "prettier": "^3.8.3",
     "typescript": "^6.0.3"
   },
