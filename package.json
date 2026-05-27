@@ -15,7 +15,7 @@
     "@nuxt/image": "^2.0.0",
     "@nuxtjs/i18n": "^10.4.0",
     "@nuxtjs/tailwindcss": "^6.14.0",
-    "@types/node": "^22",
+    "@types/node": "^24",
     "@vueuse/core": "^14.3.0",
     "@vueuse/nuxt": "^14.3.0",
     "nuxt": "^4.4.6",
@@ -33,6 +33,6 @@
     "swiper": "^12.1.4"
   },
   "engines": {
-    "node": ">=20.19.0"
+    "node": ">=24"
   }
 }
