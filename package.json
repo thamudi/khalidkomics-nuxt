@@ -33,8 +33,7 @@
     "@nuxtjs/sitemap": "^8.0.15",
     "nuxt-swiper": "^1.2.2",
     "qs": "^6.15.2",
-    "swiper": "^10.3.1",
-    "typed.js": "^2.0.16"
+    "swiper": "^10.3.1"
   },
   "engines": {
     "node": ">=20"
