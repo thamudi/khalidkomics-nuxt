@@ -57,7 +57,6 @@ export default defineNuxtConfig({
         file: 'ar.json',
       },
     ],
-    lazy: true,
     langDir: 'lang',
     defaultLocale: 'en',
     baseUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000/',
