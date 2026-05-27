@@ -8,7 +8,7 @@
   </p>
   <div
     v-if="archives && !pending && !error"
-    class="grid grid-cols-2 gap-4 w-fit mx-auto my-4"
+    class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 w-fit mx-auto my-4"
   >
     <div v-for="(archive, idx) in archivesData" :key="`${archive}-${idx}`">
       <NuxtLink :to="`/archive/${archive.attributes.slug}`">
