@@ -28,12 +28,12 @@
             height="100"
             class="thumbnail"
             :alt="comic.attributes.title"
-            :src="comic.attributes.thumbnail.data.attributes.url"
+            :src="comic.attributes.thumbnail?.data?.attributes?.url"
           />
           <div>
-            <h3 class="font-bold">
+            <h2 class="font-bold">
               {{ comic.attributes.title }}
-            </h3>
+            </h2>
             <span class="text-gray-400">
               {{ useDateFormatter(comic.attributes.releaseDate) }}
             </span>

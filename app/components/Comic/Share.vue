@@ -3,6 +3,7 @@
     <p class="text-kk-blue-dark">{{ t(message) }}</p>
     <form method="dialog">
       <button
+        type="submit"
         class="my-4 px-4 border-2 solid border-wi border-kk-black hover:bg-kk-blue hover:text-kk-blue-light"
       >
         {{ t('ok') }}

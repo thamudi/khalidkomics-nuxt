@@ -14,7 +14,7 @@
     <div v-if="!error" class="flex gap-x-4">
       <span
         v-for="item in footerData"
-        :id="`${item.socialNetwork.toLowerCase()}-${item.id}`"
+        :id="`footer-${item.socialNetwork.toLowerCase()}-${item.id}`"
       >
         <NuxtLink :to="item.link">
           <nuxt-img

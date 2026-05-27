@@ -13,7 +13,7 @@
     :sort-order="currentSortOrder"
     @change-sort-order="setSortOrder"
   />
-  <div v-if="!pending && !error">
+  <div v-if="archiveList && !pending && !error">
     <div v-if="archiveList.data.length">
       <div class="comics-list-container">
         <div
@@ -21,7 +21,7 @@
           :key="`${comic.id}-${idx}`"
         >
           <NuxtLink
-            :to="`/comic/${comic.attributes.archive.data.attributes.title}/${comic.id}`"
+            :to="`/comic/${comic.attributes.archive?.data?.attributes?.title}/${comic.id}`"
             class="flex items-center m-4 p-4"
           >
             <nuxt-img
@@ -30,12 +30,12 @@
               height="100"
               class="thumbnail"
               :alt="comic.attributes.title"
-              :src="comic.attributes.thumbnail.data.attributes.url"
+              :src="comic.attributes.thumbnail?.data?.attributes?.url"
             />
             <div>
-              <h3 class="font-bold">
+              <h2 class="font-bold">
                 {{ comic.attributes.title }}
-              </h3>
+              </h2>
               <span class="text-gray-400">
                 {{ useDateFormatter(comic.attributes.releaseDate) }}
               </span>
@@ -106,9 +106,9 @@
 
   const pagination = computed(() => {
     return {
-      currentPage: get(archiveList).meta.pagination.page,
-      pageCount: get(archiveList).meta.pagination.pageCount,
-      total: get(archiveList).meta.pagination.total,
+      currentPage: get(archiveList)?.meta?.pagination?.page ?? 1,
+      pageCount: get(archiveList)?.meta?.pagination?.pageCount ?? 0,
+      total: get(archiveList)?.meta?.pagination?.total ?? 0,
     }
   })
 

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!pending && !error">
+  <div v-if="comicData && !pending && !error">
     <ComicSlider :comic="comicData" />
     <ComicNotes
       v-if="comicData.authorsNote"
@@ -47,13 +47,14 @@
     client: false,
   })
 
-  const comicData = computed(() =>
-    get(comic).data.length
-      ? get(comic).data[0].attributes
-      : get(comic).data.attributes
-  )
+  const comicData = computed(() => {
+    const data = get(comic)?.data
+    if (!data) return null
+    return Array.isArray(data) && data.length ? data[0].attributes : data.attributes
+  })
+
   const comicUrl = computed(
-    () => `categories/${route.params.slug}/${get(comicData).id}`
+    () => `categories/${route.params.slug}/${get(comicData)?.id}`
   )
 
   const { seoTitle, seoDescription, seoImage } = useComicSeo(comicData)
@@ -71,7 +72,7 @@
 
   watch(locale, async () => {
     const comicTranslation = get(comicData)?.localizations
-    if (comicTranslation.length) {
+    if (comicTranslation?.length) {
       router.push(
         localePath(`/comic/${route.params.slug}/${comicTranslation[0].id}`)
       )
