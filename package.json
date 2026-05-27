@@ -21,7 +21,7 @@
     "@vueuse/nuxt": "^10.1.2",
     "nuxt": "^3.5.1",
     "nuxt-api-party": "^0.11.4",
-    "prettier": "^2.8.8",
+    "prettier": "^3.8.3",
     "typescript": "^6.0.3"
   },
   "dependencies": {
