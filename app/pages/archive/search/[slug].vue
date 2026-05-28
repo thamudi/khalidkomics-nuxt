@@ -100,13 +100,10 @@
     error,
     pending,
   } = await useAsyncData(
-    'comics',
+    () => `comics-search-${route.params.slug}-${route.query.q}-${get(currentPage)}-${get(currentSortOrder)}`,
     () => {
       return $cms(`comics?${get(query)}`, { cache: true })
     },
-    {
-      watch: [query],
-    }
   )
 
   const pagination = computed(() => {
