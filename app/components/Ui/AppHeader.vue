@@ -14,7 +14,7 @@
 
         <UiMenuIcon :is-open="isOpen" @toggle-menu="toggleMenu" />
       </div>
-      <MenuNavBar :class="isOpen ? 'flex' : 'hidden'" class="w-full lg:flex" />
+      <MenuNavBar :class="isOpen ? 'flex' : 'hidden'" class="max-w-5xl lg:flex" />
     </div>
   </header>
 </template>
