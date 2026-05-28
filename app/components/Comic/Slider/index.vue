@@ -1,8 +1,10 @@
 <template>
   <ComicSearch />
-  <div class="text-center flex justify-evenly">
-    <h1 class="bold">{{ props.comic.title }}</h1>
-    <span>{{ useDateFormatter(props.comic.releaseDate) }}</span>
+  <div class="max-w-sm md:max-w-md flex justify-between align-center mx-auto mt-6 px-4">
+    <div class="text-center flex justify-between w-full">
+      <h1 class="bold">{{ props.comic.title }}</h1>
+      <span>{{ useDateFormatter(props.comic.releaseDate) }}</span>
+    </div>
   </div>
   <ClientOnly>
     <div class="flex items-center gap-2 w-fit mx-auto">
