@@ -1,6 +1,6 @@
 <template>
   <span v-for="(linkItem, index) in navItems" :id="`nav-items-${index}`">
-    <NuxtLink :to="linkItem.link">
+    <NuxtLink :to="linkItem.external ? linkItem.link : localePath(linkItem.link)">
       <span class="flex">
         <nuxt-img
           class="animate-wiggle my-3 md:my-auto md:mx-1 md:w-[100px]"
@@ -17,6 +17,7 @@
 
 <script setup>
   const { locale, t } = useI18n()
+  const localePath = useLocalePath()
 
   const navItems = ref([
     {
@@ -46,6 +47,7 @@
     {
       link: 'https://khalidkomics.secure-decoration.com/',
       label: 'store',
+      external: true,
     },
   ])
 </script>
