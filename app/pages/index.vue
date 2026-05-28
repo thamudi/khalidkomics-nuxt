@@ -61,12 +61,9 @@
     error,
     pending,
   } = await useAsyncData(
-    'comics',
+    () => `comics-index-${get(currentPage)}-${get(locale)}`,
     () => {
       return $cms(`comics?${get(query)}`, { cache: true })
-    },
-    {
-      watch: [query],
     }
   )
 

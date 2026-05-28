@@ -95,12 +95,9 @@
     error,
     pending,
   } = await useAsyncData(
-    'comics',
+    () => `comics-archive-${route.params.slug}-${get(currentPage)}-${get(currentSortOrder)}`,
     () => {
       return $cms(`comics?${get(query)}`, { cache: true })
-    },
-    {
-      watch: [query],
     }
   )
 
