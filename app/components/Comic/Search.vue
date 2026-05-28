@@ -1,6 +1,6 @@
 <template>
   <div id="search">
-    <form class="mx-4" @submit.prevent="search">
+    <form class="mx-4 max-w-sm md:max-w-md" @submit.prevent="search">
       <label for="search-input" class="hidden">search</label>
       <input
         name="searchText"
@@ -36,7 +36,7 @@
 </script>
 <style scoped lang="postcss">
   #search {
-    @apply flex flex-wrap;
+    @apply flex flex-wrap justify-center;
     @apply my-4;
     @apply bg-transparent;
     @apply text-xl;
