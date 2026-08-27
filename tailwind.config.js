@@ -1,8 +1,8 @@
 export default {
   content: [
-    `./components/**/*.{vue,js,ts}`,
-    `./layouts/**/*.vue`,
-    `./pages/**/*.vue`,
+    `./app/components/**/*.{vue,js,ts}`,
+    `./app/layouts/**/*.vue`,
+    `./app/pages/**/*.vue`,
   ],
   important: true,
   theme: {

@@ -2,5 +2,6 @@
   "semi": false,
   "singleQuote": true,
   "tabWidth": 2,
-  "vueIndentScriptAndStyle": true
+  "vueIndentScriptAndStyle": true,
+  "trailingComma": "es5"
 }

@@ -1,7 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  site: {
+    name: 'Khalid Komics',
+  },
   app: {
     head: {
+      title: 'Khalid Komics',
+      htmlAttrs: { lang: 'en' },
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -15,9 +20,9 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@vueuse/nuxt',
     '@nuxtjs/tailwindcss',
-    '@nuxt/image-edge',
+    '@nuxt/image',
     'nuxt-swiper',
-    'nuxt-simple-sitemap',
+    '@nuxtjs/sitemap',
     '@nuxtjs/robots',
   ],
 
@@ -25,9 +30,9 @@ export default defineNuxtConfig({
     endpoints: {
       cms: {
         url: process.env.NUXT_API_PARTY_ENDPOINTS_CMS_URL!,
+        client: true,
       },
     },
-    allowClient: true,
   },
 
   css: [
@@ -42,39 +47,40 @@ export default defineNuxtConfig({
       {
         code: 'en',
         name: 'English',
-        iso: 'en',
+        language: 'en',
         dir: 'ltr',
         file: 'en.json',
       },
       {
         code: 'ar',
         name: 'العربية',
-        iso: 'ar',
+        language: 'ar',
         dir: 'rtl',
         file: 'ar.json',
       },
     ],
-    lazy: true,
     langDir: 'lang',
     defaultLocale: 'en',
-    baseUrl: 'http://localhost:3000/',
+    baseUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000/',
     debug: false,
   },
 
   runtimeConfig: {
-    smtpEmail: '',
-    smtpPass: '',
-    sendgridApiKey: '',
-    mailTo: '',
     nodeEnv: '',
     public: {
       nodeEnv: '',
-      sendgridApiKey: '',
       siteUrl: '',
     },
   },
 
-  typescript: {
-    shim: false,
+  image: {
+    domains: (process.env.NUXT_IMAGE_DOMAINS || '').split(',').filter(Boolean),
+  },
+
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
   },
 })
