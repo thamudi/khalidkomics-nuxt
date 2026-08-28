@@ -6,7 +6,8 @@
 
 ___
 
-# ![Khalid Komicslogo.png](public/logo.png)
+<img src="public/logo.png" alt="Khalid Komics logo" width="150" />
+
 
 The source code for the client side of Khalid Komics site
 
@@ -19,7 +20,7 @@ ___
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
     - [Running](#running)
-4. [License](#license)
+3. [License](#license)
 
 ## About the project
 
@@ -66,7 +67,7 @@ npm install
 
 #### Development
 
-1. To run the project locally for development proposes
+1. To run the project locally for development purposes
 
 ```sh
 npm run dev
@@ -82,7 +83,7 @@ npm run dev
 npm run build
 ```
 
-2. Launce the project production server
+2. Launch the project production server
 
 ```sh
 npm run start
