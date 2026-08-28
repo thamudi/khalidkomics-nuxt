@@ -1,6 +1,0 @@
-[build]
-  command = "nuxt generate"
-  publish = "dist"
-
-[build.environment]
-  NODE_VERSION = "24"

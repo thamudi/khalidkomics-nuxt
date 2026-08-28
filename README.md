@@ -1,8 +1,8 @@
 # Khalid Komics
 
-[![Staging Status](https://api.netlify.com/api/v1/badges/41ab6723-6f3b-4ed7-af4f-18829f95138c/deploy-status)](https://app.netlify.com/sites/khalidkomics-dev/deploys)
+[![Vercel Production Deployment](https://img.shields.io/github/deployments/thamudi/khalidkomics-nuxt/production?logo=vercel&label=vercel)](https://khalidkomics.vercel.app)
 
-[Staging Site](https://khalidkomics-dev.netlify.app/)
+[Staging Site](https://khalidkomics.vercel.app/)
 
 ___
 
