@@ -1,12 +1,13 @@
 # Khalid Komics
 
-[![Staging Status](https://api.netlify.com/api/v1/badges/41ab6723-6f3b-4ed7-af4f-18829f95138c/deploy-status)](https://app.netlify.com/sites/khalidkomics-dev/deploys)
+[![Vercel Production Deployment](https://img.shields.io/github/deployments/thamudi/khalidkomics-nuxt/production?logo=vercel&label=vercel)](https://khalidkomics.vercel.app)
 
-[Staging Site](https://khalidkomics-dev.netlify.app/)
+[Staging Site](https://khalidkomics.vercel.app/)
 
 ___
 
-# ![Khalid Komicslogo.png](public/logo.png)
+<img src="public/logo.png" alt="Khalid Komics logo" width="150" />
+
 
 The source code for the client side of Khalid Komics site
 
@@ -19,7 +20,7 @@ ___
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
     - [Running](#running)
-4. [License](#license)
+3. [License](#license)
 
 ## About the project
 
@@ -66,7 +67,7 @@ npm install
 
 #### Development
 
-1. To run the project locally for development proposes
+1. To run the project locally for development purposes
 
 ```sh
 npm run dev
@@ -82,7 +83,7 @@ npm run dev
 npm run build
 ```
 
-2. Launce the project production server
+2. Launch the project production server
 
 ```sh
 npm run start
